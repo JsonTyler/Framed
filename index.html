@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/1.1.0/fabric.all.min.js"></script>
+  <script src="https://cdn.rawgit.com/konvajs/konva/1.6.5/konva.min.js"></script>
+</head>
+
+<body>
+  <canvas id="c" width="500" height="500"></canvas>
+  <br />
+  <button id="rect">Rectangle</button>
+  <button id="circ">Circle</button>
+  <button id="save">Save</button>
+  <input type="text" id="text" />
+  <br>
+  <p class="save"></p>
+
+  <button onclick="getRectangleOne();">Position: Rectangle One</button>
+    <p>
+      Left:
+    </p>
+    <p id="coords">
+
+    </p>
+    <p>
+      Right:
+    </p>
+    <p id="coords2">
+
+  <button onclick="getRectangleTwo();">Position: Rectangle Two </button>
+
+
+  </p>
+  <script>
+    function getRectangleOne() {
+      var left = rect.left;
+      document.getElementById("coords").innerHTML = left;
+
+      var right = canvas.width - rect.left;
+      document.getElementById("coords2").innerHTML = right;
+    }
+
+
+
+  </script>
+  <script src="assets/js/app.js"></script>
+</body>
+
+
+
+</html>
