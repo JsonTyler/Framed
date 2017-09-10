@@ -1,0 +1,11 @@
+Main:
+  ☐ Comment index.html for better readability
+  ☐ Separate javascript into separate file
+  ☐ Allow user to input own sizes for the frames
+  ☐ Get scale working
+  ☐ Allow custom background choice
+  ☐ Allow other items
+    ☐ Posters
+    ☐ Shelves
+    ☐ Doors (Math ugh)
+    ☐ Windows (Math ugh)
