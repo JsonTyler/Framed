@@ -1,8 +1,14 @@
-#c {
-  background-color: grey;
-  margin-top: 10px;
-}
-
 button {
   padding: 10px 20px;
+}
+
+#container {
+
+  background-image: url('img/brick.jpg');
+  -webkit-background-image: url('img/brick.jpg');
+  background-size: cover;
+  border:1px solid black;
+  width: 500px;
+  /*900 if full screen w/ border*/
+  height: 500px;
 }
