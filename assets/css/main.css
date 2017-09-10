@@ -8,7 +8,7 @@ button {
   -webkit-background-image: url('img/brick.jpg');
   background-size: cover;
   border:1px solid black;
-  width: 500px;
+  width: 900px;
   /*900 if full screen w/ border*/
   height: 500px;
 }

@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="assets/css/main.css" />
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://cdn.rawgit.com/konvajs/konva/1.6.5/konva.min.js"></script>
-  <script src="assets/js/app.js"></script>
+
 </head>
 
 <body>
@@ -23,7 +23,7 @@
     var stage = new Konva.Stage({
 
       container: "container",
-      width: 800,
+      width: 900,
       height: 500,
     });
 
@@ -34,177 +34,70 @@
     var addShape = function(){
     	console.log("add shape");
     	var layer = new Konva.Layer();
-    	var parentContainer = new Konva.Rect({
-    					 x: stage.getWidth() / 2,
-    					 y: stage.getHeight() / 2,
-    					 width: 200,
-    					 height: 60,
-    					 cornerRadius: 10,
-    					 fill: '#ccc'
-    			 });
+      var tooltipLayer = new Konva.Layer();
 
-    			 var smallCircle = new Konva.Circle({
-    					 x: stage.getWidth() / 2 + 200,
-    					 y: stage.getHeight() / 2 + 30,
-    					 radius: 15,
-    					 fill: "#F2784B",
+      var parentContainer = new Konva.Rect({
+    					 x: 50,
+    					 y: 50,
+    					 width: 200,
+    					 height: 100,
+               fill: '#65666c',
+               stroke: '#3c1704',
+               strokeWidth: 15,
+               ShadowOffsetX: -7,
+               ShadowOffsetY: 4,
+               ShadowBlur: 10,
+               opacity: .9,
+              draggable: true
+           });
+
+    			 /*var parentContainer = new Konva.Circle({
+    					 x: stage.getWidth() / 2 + 100,
+    					 y: parentContainer.getWidth()/2 + 145,
+    					 radius: 6,
+    					 fill: "#000",
     					 stroke: "white",
     					 strokeWidth: 2
-    			 });
+    			 });*/
 
-           smallCircle.on('click', function() {
-             console.log(stage.getPointerPosition());
+           //Creating tooltipOne
+           var tooltip = new Konva.Text({
+             text: "",
+             fontFamily: "Calibri",
+             fontSize: 15,
+             padding: 5,
+             visible: false,
+             fill: "black",
+             opacity: 0.75,
+             textFill: "white"
+           });
+
+           layer.add(parentContainer);
+           /*layer.add(parentContainer);*/
+
+           tooltipLayer.add(tooltip);
+
+           stage.add(layer);
+           stage.add(tooltipLayer);
+
+           parentContainer.on('click', function() {
+
+             var mousePos = stage.getPointerPosition();
+             tooltip.position({
+               x : mousePos.x,
+               y : mousePos.y
+             });
+             tooltip.text("Left: " + (stage.width() - (stage.width() - parentContainer.x())) + "\n" +
+                          "Right: " + (stage.width() - parentContainer.x()) + "\n" +
+                          "Top: " + (stage.height() - (stage.height() - parentContainer.y())) + "\n" +
+                          "Bottom: " + (stage.height() - parentContainer.y())
+                         );
+             tooltip.show();
+             tooltipLayer.batchDraw();
           });
-    			 layer.add(parentContainer);
-    			 layer.add(smallCircle);
-    			 layer.draggable('true');
-    			 stage.add(layer);
     }
-
-
-
-
-    //Creating layerOne
-    var layerOne = new Konva.Layer({
-
-    });
-
-    //Creating tooltipLayerOne
-    var tooltipLayerOne = new Konva.Layer({
-
-    });
-
-    //Creating rectOne
-    var rectOne = new Konva.Rect({
-      x: 50,
-      y: 50,
-      width: 200,
-      height: 100,
-      fill: '#65666c',
-      stroke: '#3c1704',
-      strokeWidth: 15,
-      ShadowOffsetX: -7,
-      ShadowOffsetY: 4,
-      ShadowBlur: 10,
-      opacity: .6,
-      draggable: true
-    });
-
-    //Creating rectOne
-    var rectTwo = new Konva.Rect({
-      x: 200,
-      y: 200,
-      width: 200,
-      height: 100,
-      fill: '#65666c',
-      stroke: '#3c1704',
-      strokeWidth: 15,
-      ShadowOffsetX: -7,
-      ShadowOffsetY: 4,
-      ShadowBlur: 10,
-      opacity: .6,
-      draggable: true
-    });
-
-    //Creating tooltipOne
-    var tooltip = new Konva.Text({
-      text: "",
-      fontFamily: "Calibri",
-      fontSize: 12,
-      padding: 5,
-      visible: false,
-      fill: 'white',
-      opacity: 0.75,
-      textFill: "white"
-    });
-
-    //Creating tooltipOne
-    var tooltipOne = new Konva.Text({
-      text: "",
-      fontFamily: "Calibri",
-      fontSize: 12,
-      padding: 5,
-      visible: false,
-      fill: 'white',
-      opacity: 0.75,
-      textFill: "white"
-    });
-
-    //Creating tooltipTwo
-    var tooltipTwo = new Konva.Text({
-      text: "",
-      fontFamily: "Calibri",
-      fontSize: 12,
-      padding: 5,
-      visible: false,
-      fill: 'white',
-      opacity: 0.75,
-      textFill: "white"
-    });
-
-    //Events
-    rectOne.on('mouseover', function() {
-      this.fill('black');
-      layerOne.draw()
-    });
-
-
-    //Add rectOne and rectTwo to layerOne
-    layerOne.add(rectOne);
-    layerOne.add(rectTwo);
-
-
-    //Add tooltipOne to tooltipLayerOne
-    tooltipLayerOne.add(tooltipOne);
-    tooltipLayerOne.add(tooltipTwo);
-    tooltipLayerOne.add(tooltip);
-
-    //Add layerOne to Stage
-    stage.add(layerOne);
-
-    //Add tooltipLayerOne to Stage
-    stage.add(tooltipLayerOne);
-
-
-
-    //Setting tooltip event for rectOne on click
-    rectOne.on("click", function(e) {
-      //update tooltipLayerOne
-      var mousePos = stage.getPointerPosition();
-      tooltipOne.position({
-        x: mousePos.x,
-        y: mousePos.y
-      });
-      tooltipOne.text("Left: " + (stage.width() - (stage.width() - rectOne.x())) + "\n" +
-        "Right: " + (stage.width() - rectOne.x()) + "\n" +
-        "Top: " + (stage.height() - (stage.height() - rectOne.y())) + "\n" +
-        "Bottom: " + (stage.height() - rectOne.y())
-      );
-
-      tooltipOne.show();
-      tooltipLayerOne.draw();
-    });
-
-    //Setting tooltip for rectTwo on click
-    rectTwo.on("click", function(e) {
-      //update tooltipLayerOne
-      var mousePos = stage.getPointerPosition();
-      tooltipTwo.position({
-        x: mousePos.x,
-        y: mousePos.y
-      });
-      tooltipTwo.text("Left: " + (stage.width() - (stage.width() - rectTwo.x())) + "\n" +
-        "Right: " + (stage.width() - rectTwo.x()) + "\n" +
-        "Top: " + (stage.height() - (stage.height() - rectTwo.y())) + "\n" +
-        "Bottom: " + (stage.height() - rectTwo.y())
-      );
-      tooltipTwo.show();
-      tooltipLayerOne.draw();
-    });
 
   </script>
 </body>
-
-
 
 </html>
