@@ -18,7 +18,13 @@
 
   <div  id="styler1">
     <p class="UX">Add Frame:</p>
-    <button id="add-shape"></button>
+    <select id="select2">
+      <option></option>
+      <option id="another-shape" value="another-shape">5" x 7"</option>
+      <option></option>
+      <option id="add-shape" value="add-shape">8" x 10"</option>
+    </select>
+
   </div>
 
 
@@ -26,7 +32,7 @@
   <div id="styler2">
     <p class="UX">Choose Background:</p>
     <select runat="server" id="select">
-      <option class="red" value="0"></option>
+      <option></option>
       <option class="red" value="A">Blue Wall</option>
       <option class="red" value="B">Regular Brick</option>
       <option class="red" value="C">White Brick</option>
@@ -35,7 +41,6 @@
       <option class="red" value="F">White Swirl</option>
     </select>
   </div>
-
 
   <script>
     //Background Pattern/Color changer JS portion
@@ -85,6 +90,17 @@
 
   });
 
+  //Frame Changes
+  $('#select2').change(function(){
+    if($(this).val() == 'add-shape'){
+      addShape();
+
+    }
+    if($(this).val() == 'another-shape'){
+      anotherShape();
+
+    }
+  });
 
     //Creating Stage
     var stage = new Konva.Stage({
@@ -102,13 +118,18 @@
     var addShape = function() {
       console.log("add shape");
       var layer = new Konva.Layer();
+
+      var group = new Konva.Group({
+        draggable: true
+      });
+
       var tooltipLayer = new Konva.Layer();
 
       var parentContainer = new Konva.Rect({
         x: 50,
         y: 50,
-        width: 200,
-        height: 100,
+        width: 76.8,
+        height: 96,
         fill: '#65666c',
         stroke: '#3c1704',
         strokeWidth: 15,
@@ -116,7 +137,96 @@
         ShadowOffsetY: 4,
         ShadowBlur: 10,
         opacity: .9,
+        draggable: false
+      });
+
+      var circle = new Konva.Circle({
+        x: parentContainer.getWidth()/2 + 50,
+        y: parentContainer.getHeight() - 49,
+        radius: 5,
+        fill: 'black',
+        stroke: 'grey',
+        strokeWidth: '2',
+        draggable: false
+      });
+
+      //Creating tooltipOne
+      var tooltip = new Konva.Text({
+        text: "",
+        fontFamily: "Calibri",
+        fontStyle: "bold",
+        fontSize: 10,
+        padding: 5,
+        visible: false,
+        fill: "white",
+        opacity: 0.75,
+        textFill: "white"
+      });
+
+      group.add(parentContainer, circle);
+      layer.add(group);
+
+      tooltipLayer.add(tooltip);
+
+      stage.add(layer);
+      stage.add(tooltipLayer);
+
+      circle.on('click', function() {
+
+        var mousePos = stage.getPointerPosition();
+        tooltip.position({
+          x: mousePos.x - 25,
+          y: mousePos.y + 20
+        });
+        tooltip.text("Left: " + (stage.width() - (stage.width() - stage.getPointerPosition().x)) + "\n" +
+          "Right: " + (stage.width() - stage.getPointerPosition().x) + "\n" +
+          "Top: " + (stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
+          "Bottom: " + (stage.height() - stage.getPointerPosition().y)
+        );
+        tooltip.show();
+        tooltipLayer.batchDraw();
+      });
+    }
+
+
+    //NEW Size
+    jQuery("#another-shape").click(function() {
+      anotherShape();
+    });
+
+    var anotherShape = function() {
+      console.log("another shape");
+      var layer = new Konva.Layer();
+
+      var group = new Konva.Group({
         draggable: true
+      });
+
+      var tooltipLayer = new Konva.Layer();
+
+      var parentContainer = new Konva.Rect({
+        x: 50,
+        y: 50,
+        width: 300,
+        height: 50,
+        fill: '#65666c',
+        stroke: '#3c1704',
+        strokeWidth: 15,
+        ShadowOffsetX: -7,
+        ShadowOffsetY: 4,
+        ShadowBlur: 10,
+        opacity: .9,
+        draggable: false
+      });
+
+      var circle = new Konva.Circle({
+        x: parentContainer.getWidth()/2 + 50,
+        y: parentContainer.getHeight() - 50,
+        radius: 8,
+        fill: 'black',
+        stroke: 'grey',
+        strokeWidth: '3',
+        draggable: false
       });
 
       //Creating tooltipOne
@@ -131,24 +241,27 @@
         textFill: "white"
       });
 
-      layer.add(parentContainer);
+
+
+      group.add(parentContainer, circle);
+      layer.add(group);
 
       tooltipLayer.add(tooltip);
 
       stage.add(layer);
       stage.add(tooltipLayer);
 
-      parentContainer.on('click', function() {
+      circle.on('click', function() {
 
         var mousePos = stage.getPointerPosition();
         tooltip.position({
           x: mousePos.x,
           y: mousePos.y
         });
-        tooltip.text("Left: " + (stage.width() - (stage.width() - parentContainer.x())) + "\n" +
-          "Right: " + (stage.width() - parentContainer.x() - 205) + "\n" +
-          "Top: " + (stage.height() - (stage.height() - parentContainer.y())) + "\n" +
-          "Bottom: " + (stage.height() - parentContainer.y() - 105)
+        tooltip.text("Left: " + (stage.width() - (stage.width() - stage.getPointerPosition().x)) + "\n" +
+          "Right: " + (stage.width() - stage.getPointerPosition().x) + "\n" +
+          "Top: " + (stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
+          "Bottom: " + (stage.height() - stage.getPointerPosition().y)
         );
         tooltip.show();
         tooltipLayer.batchDraw();

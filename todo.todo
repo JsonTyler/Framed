@@ -1,12 +1,21 @@
 Main:
-  ☐ Fix right and bottom distance measurements
+  ☐ Fix right and bottom distance measurements (look at #anothershape and correct for #addshape)
+  ☐ Fix look of drop down box for frame sizes
+  ☐ Fix placement of background box
+  ☐ Convert pixels to inches (Website)
+  ☐ Finish adding frames with correct sizes
+  ☐ Add different styling in distance measurements for different sized frames for aesthetic
+  ☐ Add UI of the rest of the page
   ☐ Comment index.html for better readability
   ☐ Separate javascript into separate file
-  ☐ Allow user to input own sizes for the frames
   ☐ Get scale working
-  ☐ Allow custom background choice
   ☐ Allow other items
     ☐ Posters
     ☐ Shelves
     ☐ Doors (Math ugh)
     ☐ Windows (Math ugh)
+
+＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
+Archive:
+  ✔ Allow user to choose sizes for the frames @done(2017-09-18 01:52) @project(Main)
+  ✔ Allow custom background choice @done(2017-09-18 01:52) @project(Main)
