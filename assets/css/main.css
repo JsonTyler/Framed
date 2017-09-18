@@ -4,11 +4,52 @@ button {
 
 #container {
 
-  background-image: url('img/brick.jpg');
-  -webkit-background-image: url('img/brick.jpg');
+  /*background-image: url('img/brick.jpg');
+  -webkit-background-image: url('img/brick.jpg');*/
   background-size: cover;
   border:1px solid black;
   width: 900px;
   /*900 if full screen w/ border*/
   height: 500px;
+}
+
+#add-shape {
+  border: solid black 1px;
+  width: 50px;
+  height: 50px;
+}
+
+/*Background changer*/
+#select {
+  width: 50px;
+  height: 50px;
+  border: solid black 1px !important;             /*Removes border*/
+   -webkit-appearance: none;            /*Removes default chrome and safari style*/
+   -moz-appearance: none;             /* Removes Default Firefox style*/
+  background: black;
+}
+
+#select option {
+background-color: #000;
+color: white;
+}
+
+ #select select {
+       background: black;
+       border: 0 !important;  /*Removes border*/
+      -webkit-appearance: none;  /*Removes default chrome and safari style*/
+      -moz-appearance: none;  /*Removes default style Firefox*/
+   }
+
+#add-shape {
+  background: black;
+}
+
+#styler1 {
+
+}
+
+#styler2 {
+  padding-left: 200px;
+  margin-top: -100.5px;
 }
