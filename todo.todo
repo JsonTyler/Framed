@@ -1,21 +1,27 @@
 Main:
-  ☐ Fix right and bottom distance measurements (look at #anothershape and correct for #addshape)
-  ☐ Fix look of drop down box for frame sizes
-  ☐ Fix placement of background box
+  ☐ Add addditional frame sizes (website)
+  ☐ Add distance measurements styling for each frame size
   ☐ Convert pixels to inches (Website)
-  ☐ Finish adding frames with correct sizes
-  ☐ Add different styling in distance measurements for different sized frames for aesthetic
+      15 px = 1 inch
+      so then 1 ft = 180px
+      so then 8 ft = 
   ☐ Add UI of the rest of the page
   ☐ Comment index.html for better readability
-  ☐ Separate javascript into separate file
-  ☐ Get scale working
   ☐ Allow other items
     ☐ Posters
     ☐ Shelves
     ☐ Doors (Math ugh)
     ☐ Windows (Math ugh)
 
+Remember:
+  ☐ browser sync command: browser-sync start --server --files index.html, assets/css/*.css, assets/js/*.js, assets/*.json"
+
+
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+  ✔ Fix right and bottom distance measurements (look at #anothershape and correct for #addshape) @done(2017-09-19 20:06) @project(Main)
+  ✔ Fix look of drop down box for frame sizes @done(2017-09-19 20:06) @project(Main)
+  ✔ Get scale working @done(2017-09-19 20:07) @project(Main)
+  ✔ Separate javascript into separate file @done(2017-09-19 00:32) @project(Main)
   ✔ Allow user to choose sizes for the frames @done(2017-09-18 01:52) @project(Main)
   ✔ Allow custom background choice @done(2017-09-18 01:52) @project(Main)

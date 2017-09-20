@@ -1,16 +1,39 @@
+html{
+height: 100%;
+}
+
+body {
+  overflow: hidden;
+  height: 100%;
+}
+
+
 button {
   padding: 10px 20px;
 }
 
+#controlPanel {
+  width: 318px;
+  height: 90px;
+  padding: 50px;
+  position: relative;
+  background: rgb(33, 146, 196);
+  color: white;
+  font-weight: bold;
+  left: 40px;
+  top: 50px;
+  border: solid black 3px;
+}
+
 #container {
 
-  /*background-image: url('img/brick.jpg');
-  -webkit-background-image: url('img/brick.jpg');*/
-  background-size: cover;
-  border:1px solid black;
-  width: 900px;
-  /*900 if full screen w/ border*/
-  height: 500px;
+  position: absolute;
+      top: 50%;
+      left: 50%;
+      bottom: 30%;
+      transform: translateX(-50%) translateY(-50%);
+  width: 100%;
+  height: 100%;
 }
 
 #another-shape {
@@ -28,32 +51,32 @@ button {
 }
 
 /*Background changer*/
-#select {
+.select {
   width: 50px;
   height: 50px;
   border: solid black 1px !important;             /*Removes border*/
    -webkit-appearance: none;            /*Removes default chrome and safari style*/
    -moz-appearance: none;             /* Removes Default Firefox style*/
-  background: black;
+  background-color: black;
+
 }
 
-#select option {
+.select option {
 background-color: #000;
 color: white;
+
 }
 
- #select select {
+ .select select {
        background: black;
        border: 0 !important;  /*Removes border*/
       -webkit-appearance: none;  /*Removes default chrome and safari style*/
       -moz-appearance: none;  /*Removes default style Firefox*/
    }
 
-#styler1 {
-
-}
-
-#styler2 {
-  padding-left: 200px;
-  margin-top: -100.5px;
+ .select{
+ background-color: #000;
+ color: white;
+ width: 50px;
+ height: 20px;
 }

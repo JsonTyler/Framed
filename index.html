@@ -12,26 +12,20 @@
 
 <body>
   <!--konva js-->
-  <div id="container">
 
-  </div>
+    <div id="container"></div>
 
-  <div  id="styler1">
-    <p class="UX">Add Frame:</p>
-    <select id="select2">
-      <option></option>
-      <option id="another-shape" value="another-shape">5" x 7"</option>
-      <option></option>
-      <option id="add-shape" value="add-shape">8" x 10"</option>
-    </select>
 
-  </div>
+
+
 
 
   <!-- Background Pattern/Color changer HTML portion -->
-  <div id="styler2">
-    <p class="UX">Choose Background:</p>
-    <select runat="server" id="select">
+  <br />
+<div id="controlPanel">
+  <div id="styler1">
+    Choose Background:
+    <select runat="server" class="select" id="one">
       <option></option>
       <option class="red" value="A">Blue Wall</option>
       <option class="red" value="B">Regular Brick</option>
@@ -41,233 +35,37 @@
       <option class="red" value="F">White Swirl</option>
     </select>
   </div>
+<br />
+  <div id="styler2">
+    Add Frame:
+    <select class="select" id="two">
+      <option></option>
+      <option id="add-shape" value="add-shape">4" x 6"</option>
+      <option id="another-shape" value="another-shape">5" x 7"</option>
+      <!--<option id="6x8" value="6x8">6" x 8"</option>
+      <option id="8x10" value="8x10">8" x 10"</option>
+      <option id="10x13" value="10x13">10" x 13"</option>
+      <option id="11x14" value="11x14">11" x 14"</option>
+      <option id="16x20" value="16x20">16" x 20"</option>
+      <option id="18x24" value="18x24">18" x 24"</option>
+      <option id="20x24" value="20x24">20" x 24"</option>
+      <option id="24x30" value="20x30">24" x 30"</option>
+      <option id="24x36" value="20x36">24" x 36"</option>-->
+    </select>
+  </div>
+<br />
 
-  <script>
-    //Background Pattern/Color changer JS portion
-  $('#select').change(function(){
-    if($(this).val() == 'A'){
-      $("#select, #container, #add-shape").css('background-image', 'url(assets/css/img/blueWall.jpg)');
-      $("#select, #container, #add-shape").css('background-size', 'cover');
-      $("#select, #container, #add-shape").css('color', 'transparent');
-      $("#select, #container, #add-shape").css('font-style', 'bold');
-
-    }
-    if($(this).val() == 'B'){
-      $("#select, #container, #add-shape").css('background-image', 'url(assets/css/img/brick.jpg)');
-      $("#select, #container, #add-shape").css('background-size', 'cover');
-      $("#select, #container, #add-shape").css('color', 'transparent');
-      $("#select, #container, #add-shape").css('font-style', 'bold');
-
-    }
-    if($(this).val() == 'C'){
-      $("#select, #container, #add-shape").css('background-image', 'url(assets/css/img/whiteBrick.jpg)');
-      $("#select, #container, #add-shape").css('background-size', 'cover');
-      $("#select, #container, #add-shape").css('color', 'transparent');
-      $("#select, #container, #add-shape").css('font-style', 'bold');
-
-    }
-    if($(this).val() == 'D'){
-      $("#select, #container, #add-shape").css('background-image', 'url(assets/css/img/whiteWall.jpg)');
-      $("#select, #container, #add-shape").css('background-size', 'cover');
-      $("#select, #container, #add-shape").css('color', 'transparent');
-      $("#select, #container, #add-shape").css('font-style', 'bold');
-
-    }
-    if($(this).val() == 'E'){
-      $("#select, #container, #add-shape").css('background-image', 'url(assets/css/img/wood.jpg)');
-      $("#select, #container, #add-shape").css('background-size', 'cover');
-      $("#select, #container, #add-shape").css('color', 'transparent');
-      $("#select, #container, #add-shape").css('font-style', 'bold');
-
-    }
-    if($(this).val() == 'F'){
-      $("#select, #container, #add-shape").css('background-image', 'url(assets/css/img/whiteSwirl.jpg)');
-      $("#select, #container, #add-shape").css('background-size', 'cover');
-      $("#select, #container, #add-shape").css('color', 'transparent');
-      $("#select, #container, #add-shape").css('font-style', 'bold');
-
-    }
-
-  });
-
-  //Frame Changes
-  $('#select2').change(function(){
-    if($(this).val() == 'add-shape'){
-      addShape();
-
-    }
-    if($(this).val() == 'another-shape'){
-      anotherShape();
-
-    }
-  });
-
-    //Creating Stage
-    var stage = new Konva.Stage({
-
-      container: "container",
-      width: 900,
-      height: 500,
-    });
-
-    //Original Size
-    jQuery("#add-shape").click(function() {
-      addShape();
-    });
-
-    var addShape = function() {
-      console.log("add shape");
-      var layer = new Konva.Layer();
-
-      var group = new Konva.Group({
-        draggable: true
-      });
-
-      var tooltipLayer = new Konva.Layer();
-
-      var parentContainer = new Konva.Rect({
-        x: 50,
-        y: 50,
-        width: 76.8,
-        height: 96,
-        fill: '#65666c',
-        stroke: '#3c1704',
-        strokeWidth: 15,
-        ShadowOffsetX: -7,
-        ShadowOffsetY: 4,
-        ShadowBlur: 10,
-        opacity: .9,
-        draggable: false
-      });
-
-      var circle = new Konva.Circle({
-        x: parentContainer.getWidth()/2 + 50,
-        y: parentContainer.getHeight() - 49,
-        radius: 5,
-        fill: 'black',
-        stroke: 'grey',
-        strokeWidth: '2',
-        draggable: false
-      });
-
-      //Creating tooltipOne
-      var tooltip = new Konva.Text({
-        text: "",
-        fontFamily: "Calibri",
-        fontStyle: "bold",
-        fontSize: 10,
-        padding: 5,
-        visible: false,
-        fill: "white",
-        opacity: 0.75,
-        textFill: "white"
-      });
-
-      group.add(parentContainer, circle);
-      layer.add(group);
-
-      tooltipLayer.add(tooltip);
-
-      stage.add(layer);
-      stage.add(tooltipLayer);
-
-      circle.on('click', function() {
-
-        var mousePos = stage.getPointerPosition();
-        tooltip.position({
-          x: mousePos.x - 25,
-          y: mousePos.y + 20
-        });
-        tooltip.text("Left: " + (stage.width() - (stage.width() - stage.getPointerPosition().x)) + "\n" +
-          "Right: " + (stage.width() - stage.getPointerPosition().x) + "\n" +
-          "Top: " + (stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
-          "Bottom: " + (stage.height() - stage.getPointerPosition().y)
-        );
-        tooltip.show();
-        tooltipLayer.batchDraw();
-      });
-    }
+  <div id="styler3">
+    <form id="myForm" name="myForm" onsubmit="event.preventDefault(); return loadData(this)">
+      Wall Width:
+      <input type="number" name="wallWidth" id="wallWidth" />
+      <input type="submit" id="submitbtn" data-inline="true" value="Submit">
+    </form>
+  </div>
+</div>
 
 
-    //NEW Size
-    jQuery("#another-shape").click(function() {
-      anotherShape();
-    });
-
-    var anotherShape = function() {
-      console.log("another shape");
-      var layer = new Konva.Layer();
-
-      var group = new Konva.Group({
-        draggable: true
-      });
-
-      var tooltipLayer = new Konva.Layer();
-
-      var parentContainer = new Konva.Rect({
-        x: 50,
-        y: 50,
-        width: 300,
-        height: 50,
-        fill: '#65666c',
-        stroke: '#3c1704',
-        strokeWidth: 15,
-        ShadowOffsetX: -7,
-        ShadowOffsetY: 4,
-        ShadowBlur: 10,
-        opacity: .9,
-        draggable: false
-      });
-
-      var circle = new Konva.Circle({
-        x: parentContainer.getWidth()/2 + 50,
-        y: parentContainer.getHeight() - 50,
-        radius: 8,
-        fill: 'black',
-        stroke: 'grey',
-        strokeWidth: '3',
-        draggable: false
-      });
-
-      //Creating tooltipOne
-      var tooltip = new Konva.Text({
-        text: "",
-        fontFamily: "Calibri",
-        fontSize: 15,
-        padding: 5,
-        visible: false,
-        fill: "black",
-        opacity: 0.75,
-        textFill: "white"
-      });
-
-
-
-      group.add(parentContainer, circle);
-      layer.add(group);
-
-      tooltipLayer.add(tooltip);
-
-      stage.add(layer);
-      stage.add(tooltipLayer);
-
-      circle.on('click', function() {
-
-        var mousePos = stage.getPointerPosition();
-        tooltip.position({
-          x: mousePos.x,
-          y: mousePos.y
-        });
-        tooltip.text("Left: " + (stage.width() - (stage.width() - stage.getPointerPosition().x)) + "\n" +
-          "Right: " + (stage.width() - stage.getPointerPosition().x) + "\n" +
-          "Top: " + (stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
-          "Bottom: " + (stage.height() - stage.getPointerPosition().y)
-        );
-        tooltip.show();
-        tooltipLayer.batchDraw();
-      });
-    }
-  </script>
+  <script src="assets/js/script.js"></script>
 </body>
 
 </html>
