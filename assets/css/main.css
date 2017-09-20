@@ -14,8 +14,8 @@ button {
 
 #controlPanel {
   width: 318px;
-  height: 90px;
-  padding: 50px;
+  height: 150px;
+  padding: 40px;
   position: relative;
   background: rgb(33, 146, 196);
   color: white;

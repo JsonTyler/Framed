@@ -11,8 +11,8 @@
 </head>
 
 <body>
-  <!--konva js-->
 
+  <!--The div for Konva.js, where the stage allocated into-->
     <div id="container"></div>
 
 
@@ -20,8 +20,13 @@
 
 
 
-  <!-- Background Pattern/Color changer HTML portion -->
-  <br />
+  <!--
+    Drop down boxes for
+      - Choosing a background
+      - Adding a frame
+      - Choosing w x h of wall
+  -->
+<br />
 <div id="controlPanel">
   <div id="styler1">
     Choose Background:
@@ -58,7 +63,10 @@
   <div id="styler3">
     <form id="myForm" name="myForm" onsubmit="event.preventDefault(); return loadData(this)">
       Wall Width:
-      <input type="number" name="wallWidth" id="wallWidth" />
+      <input type="number" name="wallWidth" id="wallWidth" /> <br /> <br />
+      Wall Height:
+      <input type="number" name="wallHeight" id="wallHeight" />
+      <br /><br />
       <input type="submit" id="submitbtn" data-inline="true" value="Submit">
     </form>
   </div>

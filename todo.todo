@@ -1,12 +1,19 @@
 Main:
-  ☐ Add addditional frame sizes (website)
-  ☐ Add distance measurements styling for each frame size
+  ☐ Fix placement of dots/nails (important due to that their location is inversely related to the tooltip location)
+  ☐ Add additional frame sizes (sizes listed on index.html)
+  ☐ Change drop down boxes from pixels to inches/ft
+  ☐ Add delete button
+  ☐ Add appropriate distance measurements styling for each frame size (white)
   ☐ Convert pixels to inches (Website)
-      15 px = 1 inch
-      so then 1 ft = 180px
-      so then 8 ft = 
+      900px is max height size for page
   ☐ Add UI of the rest of the page
-  ☐ Comment index.html for better readability
+  ✔ Comment script.js for better readability @done(2017-09-20 01:34) @project(Main)
+  ✔ Add height for resize option @done(2017-09-20 01:51) @project(Main)
+  ✔ Comment index.html for better readability @done(2017-09-20 02:03) @project(Main)
+
+
+Extras:
+  ☐ Allow controlPanel to be draggable
   ☐ Allow other items
     ☐ Posters
     ☐ Shelves
