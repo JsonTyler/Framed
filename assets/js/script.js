@@ -117,10 +117,8 @@ and to do that I have to call it from index.html into script.js
   var height = form.wallHeight.value;
 
   var container = document.getElementById('container');
-  console.log(container);
 
   container.style.width = width + 'px';
-  console.log(container.style.width);
   container.style.height = height + 'px';
 
   var control = document.getElementById('controlPanel');
@@ -133,7 +131,7 @@ the container is referencing the html div id #container in index.html.
 
 2. The 'width: width' is referencing up above.
 
-3. Will add 'heigh: height' is referencing up above
+3. The 'height: height' is referencing up above
  */
   var stage = new Konva.Stage({
 
@@ -169,7 +167,6 @@ to act as a nail and a marker.
 Var tooltip creates a text layer that I use to display the tooltip
  */
 var addShape = function() {
-  console.log("add shape");
   var layer = new Konva.Layer();
 
   var group = new Konva.Group({
@@ -181,8 +178,8 @@ var addShape = function() {
   var parentContainer = new Konva.Rect({
     x: 200,
     y: 200,
-    width: 76.8,
-    height: 96,
+    width: 40,
+    height: 60,
     fill: '#65666c',
     stroke: '#3c1704',
     strokeWidth: 15,

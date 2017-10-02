@@ -7,9 +7,6 @@ Main:
   ☐ Convert pixels to inches (Website)
       900px is max height size for page
   ☐ Add UI of the rest of the page
-  ✔ Comment script.js for better readability @done(2017-09-20 01:34) @project(Main)
-  ✔ Add height for resize option @done(2017-09-20 01:51) @project(Main)
-  ✔ Comment index.html for better readability @done(2017-09-20 02:03) @project(Main)
 
 
 Extras:
@@ -26,6 +23,9 @@ Remember:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+  ✔ Comment script.js for better readability @done(2017-09-20 01:34) @project(Main)
+  ✔ Add height for resize option @done(2017-09-20 01:51) @project(Main)
+  ✔ Comment index.html for better readability @done(2017-09-20 02:03) @project(Main)
   ✔ Fix right and bottom distance measurements (look at #anothershape and correct for #addshape) @done(2017-09-19 20:06) @project(Main)
   ✔ Fix look of drop down box for frame sizes @done(2017-09-19 20:06) @project(Main)
   ✔ Get scale working @done(2017-09-19 20:07) @project(Main)
