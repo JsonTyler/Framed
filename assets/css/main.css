@@ -1,5 +1,6 @@
 html{
 height: 100%;
+background: #2d2c32;
 }
 
 body {
@@ -17,7 +18,7 @@ button {
   height: 150px;
   padding: 40px;
   position: relative;
-  background: rgb(33, 146, 196);
+  background: #7dcb97;
   color: white;
   font-weight: bold;
   left: 40px;
@@ -36,14 +37,14 @@ button {
   height: 100%;
 }
 
-#another-shape {
+#eightbyten {
   background: black;
   border: solid black 1px;
   width: 50px;
   height: 50px;
 }
 
-#add-shape {
+#fivebyseven {
   border: solid black 1px;
   width: 50px;
   height: 50px;

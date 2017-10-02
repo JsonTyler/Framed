@@ -1,21 +1,16 @@
 Main:
-  ☐ Fix placement of dots/nails (important due to that their location is inversely related to the tooltip location)
-  ☐ Add additional frame sizes (sizes listed on index.html)
-  ☐ Change drop down boxes from pixels to inches/ft
-  ☐ Add delete button
-  ☐ Add appropriate distance measurements styling for each frame size (white)
-  ☐ Convert pixels to inches (Website)
-      900px is max height size for page
+  ☐ Change wall width and wall height input boxes from pixels to inches/ft
+  ☐ Change measurements from pixels to inches/ft
+  ☐ Add hover over tooltip to show frame size (ex: 5x7)
+  ☐ Add delete button (currently can only drag off the page)
   ☐ Add UI of the rest of the page
 
-
 Extras:
-  ☐ Allow controlPanel to be draggable
   ☐ Allow other items
     ☐ Posters
     ☐ Shelves
-    ☐ Doors (Math ugh)
-    ☐ Windows (Math ugh)
+    ☐ Doors (Math ugh, nah aesthetic only)
+    ☐ Windows (Math ugh, nah aesthetic only)
 
 Remember:
   ☐ browser sync command: browser-sync start --server --files index.html, assets/css/*.css, assets/js/*.js, assets/*.json"
@@ -23,10 +18,19 @@ Remember:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+  ✔ Add appropriate distance measurements styling for each frame size (white) @done(2017-10-02 03:00) @project(Main)
+  ✔ Fix placement of dots/nails (important due to that their location is directly related to the tooltip location) @done(2017-10-02 02:59) @project(Main)
+  ✔ Add additional frame sizes (sizes listed on index.html) @done(2017-10-02 02:59) @project(Main)
+  ✔ Convert pixels to inches in theory (Max width: 1500px & Max height: 850 px  ||  Max width: 15 feet & Max height: 8.5 feet  ||  100px = 1 ft  || 8px = 1in) @done(2017-10-02 02:00) @project(Main)
+  ✔ Fixed infinite decimals with Math.round @done(2017-10-02 01:58) @project(Main)
+  
+  ✔ Allow controlPanel to be draggable @done(2017-10-01 23:30) @project(Extras)
+
+
   ✔ Comment script.js for better readability @done(2017-09-20 01:34) @project(Main)
   ✔ Add height for resize option @done(2017-09-20 01:51) @project(Main)
   ✔ Comment index.html for better readability @done(2017-09-20 02:03) @project(Main)
-  ✔ Fix right and bottom distance measurements (look at #anothershape and correct for #addshape) @done(2017-09-19 20:06) @project(Main)
+  ✔ Fix right and bottom distance measurements (look at #eightbyten and correct for #fivebyseven) @done(2017-09-19 20:06) @project(Main)
   ✔ Fix look of drop down box for frame sizes @done(2017-09-19 20:06) @project(Main)
   ✔ Get scale working @done(2017-09-19 20:07) @project(Main)
   ✔ Separate javascript into separate file @done(2017-09-19 00:32) @project(Main)

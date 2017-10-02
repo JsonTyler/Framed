@@ -20,45 +20,45 @@ Background changer for stage & select drop down boxes.
   */
   $('select').change(function(){
     if($(this).val() == 'A'){
-      $("select, #container, #add-shape").css('background-image', 'url(assets/css/img/blueWall.jpg)');
-      $("select, #container, #add-shape").css('background-size', 'cover');
-      $("select, #container, #add-shape").css('color', 'transparent');
-      $("select, #container, #add-shape").css('font-style', 'bold');
+      $("select, #container").css('background-image', 'url(assets/css/img/blueWall.jpg)');
+      $("select, #container").css('background-size', 'cover');
+      $("select, #container").css('color', 'transparent');
+      $("select, #container").css('font-style', 'bold');
 
     }
     if($(this).val() == 'B'){
-      $("select, #container, #add-shape").css('background-image', 'url(assets/css/img/brick.jpg)');
-      $("select, #container, #add-shape").css('background-size', 'cover');
-      $("select, #container, #add-shape").css('color', 'transparent');
-      $("select, #container, #add-shape").css('font-style', 'bold');
+      $("select, #container").css('background-image', 'url(assets/css/img/brick.jpg)');
+      $("select, #container").css('background-size', 'cover');
+      $("select, #container").css('color', 'transparent');
+      $("select, #container").css('font-style', 'bold');
 
     }
     if($(this).val() == 'C'){
-      $("select, #container, #add-shape").css('background-image', 'url(assets/css/img/whiteBrick.jpg)');
-      $("select, #container, #add-shape").css('background-size', 'cover');
-      $("select, #container, #add-shape").css('color', 'transparent');
-      $("select, #container, #add-shape").css('font-style', 'bold');
+      $("select, #container").css('background-image', 'url(assets/css/img/whiteBrick.jpg)');
+      $("select, #container").css('background-size', 'cover');
+      $("select, #container").css('color', 'transparent');
+      $("select, #container").css('font-style', 'bold');
 
     }
     if($(this).val() == 'D'){
-      $("select, #container, #add-shape").css('background-image', 'url(assets/css/img/whiteWall.jpg)');
-      $("select, #container, #add-shape").css('background-size', 'cover');
-      $("select, #container, #add-shape").css('color', 'transparent');
-      $("select, #container, #add-shape").css('font-style', 'bold');
+      $("select, #container").css('background-image', 'url(assets/css/img/whiteWall.jpg)');
+      $("select, #container").css('background-size', 'cover');
+      $("select, #container").css('color', 'transparent');
+      $("select, #container").css('font-style', 'bold');
 
     }
     if($(this).val() == 'E'){
-      $("select, #container, #add-shape").css('background-image', 'url(assets/css/img/wood.jpg)');
-      $("select, #container, #add-shape").css('background-size', 'cover');
-      $("select, #container, #add-shape").css('color', 'transparent');
-      $("select, #container, #add-shape").css('font-style', 'bold');
+      $("select, #container").css('background-image', 'url(assets/css/img/wood.jpg)');
+      $("select, #container").css('background-size', 'cover');
+      $("select, #container").css('color', 'transparent');
+      $("select, #container").css('font-style', 'bold');
 
     }
     if($(this).val() == 'F'){
-      $("select, #container, #add-shape").css('background-image', 'url(assets/css/img/whiteSwirl.jpg)');
-      $("select, #container, #add-shape").css('background-size', 'cover');
-      $("select, #container, #add-shape").css('color', 'transparent');
-      $("select, #container, #add-shape").css('font-style', 'bold');
+      $("select, #container").css('background-image', 'url(assets/css/img/whiteSwirl.jpg)');
+      $("select, #container").css('background-size', 'cover');
+      $("select, #container").css('color', 'transparent');
+      $("select, #container").css('font-style', 'bold');
 
     }
   });
@@ -68,15 +68,12 @@ Background changer for stage & select drop down boxes.
 /*
 Frame Changer for select drop down box
   Available Frame Sizes:
-    - 4 x 6
     - 5 x 7
-    - 6 x 8
-    - 10 x 13
+    - 8 x 10
     - 11 x 14
     - 16 x 20
     - 18 x 24
     - 20 x 24
-    - 24 x 30
     - 24 x 36
 
 Warning: To select the same frame size more than once, you must choose the
@@ -85,13 +82,37 @@ frame size again.
  */
 $('select').change(function(){
 
-  if($(this).val() == 'add-shape'){
-    addShape();
+  if($(this).val() == 'fivebyseven'){
+    fivebyseven();
   }
 
-  if($(this).val() == 'another-shape'){
-    anotherShape();
+  if($(this).val() == 'eightbyten'){
+    eightbyten();
   }
+
+  if($(this).val() == 'elevenbyfourteen'){
+    elevenbyfourteen();
+  }
+
+  if($(this).val() == 'sixteenbytwenty'){
+    sixteenbytwenty();
+  }
+
+  if($(this).val() == 'eighteenbytwentyfour'){
+    eighteenbytwentyfour();
+  }
+
+  if($(this).val() == 'twentybytwentyfour'){
+    twentybytwentyfour();
+  }
+
+  if($(this).val() == 'twentyfourbythirtysix'){
+    twentyfourbythirtysix();
+  }
+
+
+
+
 
 });
 
@@ -144,16 +165,16 @@ the container is referencing the html div id #container in index.html.
 
 /*
 Adding a click function for when the user clicks on the drop down box and
-selects #add-shape then the function addShape() will be triggered
+selects #fivebyseven then the function fivebyseven() will be triggered
  */
-jQuery("#add-shape").click(function() {
-  addShape();
+jQuery("#fivebyseven").click(function() {
+  fivebyseven();
 });
 
 
 
 /*
-Function addShape(): Encompasses a function that on click will create a frame
+Function fivebyseven(): Encompasses a function that on click will create a frame
 (w/ var parentContainer & var circle) on the stage.
 
 Function cirlce.on(): Acts as the marker for the frame (parentContainer). On
@@ -166,7 +187,7 @@ to act as a nail and a marker.
 
 Var tooltip creates a text layer that I use to display the tooltip
  */
-var addShape = function() {
+var fivebyseven = function() {
   var layer = new Konva.Layer();
 
   var group = new Konva.Group({
@@ -179,10 +200,10 @@ var addShape = function() {
     x: 200,
     y: 200,
     width: 40,
-    height: 60,
+    height: 56,
     fill: '#65666c',
     stroke: '#3c1704',
-    strokeWidth: 15,
+    strokeWidth: 13,
     ShadowOffsetX: -7,
     ShadowOffsetY: 4,
     ShadowBlur: 10,
@@ -191,8 +212,204 @@ var addShape = function() {
   });
 
   var circle = new Konva.Circle({
-    x: parentContainer.getWidth()/2 + 50,
-    y: parentContainer.getHeight() - 49,
+    x: 200 + parentContainer.getWidth()/2,
+    y: 195,
+    radius: 5,
+    fill: 'black',
+    stroke: 'grey',
+    strokeWidth: '2',
+    draggable: false
+  });
+
+  //Creating tooltipOne
+  var tooltip = new Konva.Text({
+    text: "",
+    fontFamily: "Calibri",
+    fontStyle: "bold",
+    fontSize: 9,
+    padding: 5,
+    visible: false,
+    fill: "white",
+    opacity: 0.75,
+    textFill: "white"
+  });
+
+  group.add(parentContainer, circle);
+  layer.add(group);
+
+  tooltipLayer.add(tooltip);
+
+  stage.add(layer);
+  stage.add(tooltipLayer);
+
+  circle.on('click', function() {
+
+    var mousePos = stage.getPointerPosition();
+    tooltip.position({
+      x: mousePos.x - 23,
+      y: mousePos.y + 20
+    });
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
+      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
+    );
+    tooltip.show();
+    tooltipLayer.batchDraw();
+  });
+}
+
+
+
+/*
+Adding a click function for when the user clicks on the drop down box and
+selects #eightbyten then the function eightbyten() will be triggered
+ */
+jQuery("#eightbyten").click(function() {
+  eightbyten();
+});
+
+
+
+/*
+Function eightbyten(): Encompasses a function that on click will create a frame
+(w/ var parentContainer & var circle) on the stage.
+
+Function cirlce.on(): Acts as the marker for the frame (parentContainer). On
+click it triggers the tooltip to be printed on the frame.
+
+Var parentContainer creates a new Konva.Rect that acts as the frame
+
+Var circle creates a new Konva.Circle that I attached to the the parentContainer
+to act as a nail and a marker.
+
+Var tooltip creates a text layer that I use to display the tooltip
+ */
+var eightbyten = function() {
+  var layer = new Konva.Layer();
+
+  var group = new Konva.Group({
+    draggable: true
+  });
+
+  var tooltipLayer = new Konva.Layer();
+
+  var parentContainer = new Konva.Rect({
+    x: 200,
+    y: 200,
+    width: 64,
+    height: 80,
+    fill: '#65666c',
+    stroke: '#3c1704',
+    strokeWidth: 13,
+    ShadowOffsetX: -7,
+    ShadowOffsetY: 4,
+    ShadowBlur: 10,
+    opacity: .9,
+    draggable: false
+  });
+
+  var circle = new Konva.Circle({
+    x: 200 + parentContainer.getWidth()/2,
+    y: 195,
+    radius: 5,
+    fill: 'black',
+    stroke: 'grey',
+    strokeWidth: '2',
+    draggable: false
+  });
+
+  //Creating tooltipOne
+  var tooltip = new Konva.Text({
+    text: "",
+    fontFamily: "Calibri",
+    fontStyle: "bold",
+    fontSize: 10,
+    padding: 5,
+    visible: false,
+    fill: "white",
+    opacity: 0.75,
+    textFill: "white"
+  });
+
+
+
+  group.add(parentContainer, circle);
+  layer.add(group);
+
+  tooltipLayer.add(tooltip);
+
+  stage.add(layer);
+  stage.add(tooltipLayer);
+
+  circle.on('click', function() {
+
+    var mousePos = stage.getPointerPosition();
+    tooltip.position({
+      x: mousePos.x - 23,
+      y: mousePos.y + 20
+    });
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
+      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
+    );
+    tooltip.show();
+    tooltipLayer.batchDraw();
+  });
+}
+
+/*
+Adding a click function for when the user clicks on the drop down box and
+selects #elevenbyfourteen then the function elevenbyfourteen() will be triggered
+ */
+jQuery("#elevenbyfourteen").click(function() {
+  elevenbyfourteen();
+});
+
+
+
+/*
+Function elevenbyfourteen(): Encompasses a function that on click will create a frame
+(w/ var parentContainer & var circle) on the stage.
+
+Function cirlce.on(): Acts as the marker for the frame (parentContainer). On
+click it triggers the tooltip to be printed on the frame.
+
+Var parentContainer creates a new Konva.Rect that acts as the frame
+
+Var circle creates a new Konva.Circle that I attached to the the parentContainer
+to act as a nail and a marker.
+
+Var tooltip creates a text layer that I use to display the tooltip
+ */
+var elevenbyfourteen = function() {
+  var layer = new Konva.Layer();
+
+  var group = new Konva.Group({
+    draggable: true
+  });
+
+  var tooltipLayer = new Konva.Layer();
+
+  var parentContainer = new Konva.Rect({
+    x: 200,
+    y: 200,
+    width: 88,
+    height: 112,
+    fill: '#65666c',
+    stroke: '#3c1704',
+    strokeWidth: 13,
+    ShadowOffsetX: -7,
+    ShadowOffsetY: 4,
+    ShadowBlur: 10,
+    opacity: .9,
+    draggable: false
+  });
+
+  var circle = new Konva.Circle({
+    x: 200 + parentContainer.getWidth()/2,
+    y: 195,
     radius: 5,
     fill: 'black',
     stroke: 'grey',
@@ -225,13 +442,13 @@ var addShape = function() {
 
     var mousePos = stage.getPointerPosition();
     tooltip.position({
-      x: mousePos.x - 25,
+      x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + (stage.width() - (stage.width() - stage.getPointerPosition().x)) + "\n" +
-      "Right: " + (stage.width() - stage.getPointerPosition().x) + "\n" +
-      "Top: " + (stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
-      "Bottom: " + (stage.height() - stage.getPointerPosition().y)
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
+      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
     );
     tooltip.show();
     tooltipLayer.batchDraw();
@@ -239,19 +456,18 @@ var addShape = function() {
 }
 
 
-
 /*
 Adding a click function for when the user clicks on the drop down box and
-selects #another-shape then the function anotherShape() will be triggered
+selects #sixteenbytwenty then the function sixteenbytwenty() will be triggered
  */
-jQuery("#another-shape").click(function() {
-  anotherShape();
+jQuery("#sixteenbytwenty").click(function() {
+  sixteenbytwenty();
 });
 
 
 
 /*
-Function anotherShape(): Encompasses a function that on click will create a frame
+Function sixteenbytwenty(): Encompasses a function that on click will create a frame
 (w/ var parentContainer & var circle) on the stage.
 
 Function cirlce.on(): Acts as the marker for the frame (parentContainer). On
@@ -264,8 +480,7 @@ to act as a nail and a marker.
 
 Var tooltip creates a text layer that I use to display the tooltip
  */
-var anotherShape = function() {
-  console.log("another shape");
+var sixteenbytwenty = function() {
   var layer = new Konva.Layer();
 
   var group = new Konva.Group({
@@ -277,11 +492,11 @@ var anotherShape = function() {
   var parentContainer = new Konva.Rect({
     x: 200,
     y: 200,
-    width: 48,
-    height: 67.2,
+    width: 128,
+    height: 160,
     fill: '#65666c',
     stroke: '#3c1704',
-    strokeWidth: 15,
+    strokeWidth: 13,
     ShadowOffsetX: -7,
     ShadowOffsetY: 4,
     ShadowBlur: 10,
@@ -290,12 +505,12 @@ var anotherShape = function() {
   });
 
   var circle = new Konva.Circle({
-    x: parentContainer.getWidth()/2 + 50,
-    y: parentContainer.getHeight() - 50,
-    radius: 8,
+    x: 200 + parentContainer.getWidth()/2,
+    y: 195,
+    radius: 5,
     fill: 'black',
     stroke: 'grey',
-    strokeWidth: '3',
+    strokeWidth: '2',
     draggable: false
   });
 
@@ -303,15 +518,14 @@ var anotherShape = function() {
   var tooltip = new Konva.Text({
     text: "",
     fontFamily: "Calibri",
-    fontSize: 15,
+    fontStyle: "bold",
+    fontSize: 10,
     padding: 5,
     visible: false,
-    fill: "black",
+    fill: "white",
     opacity: 0.75,
     textFill: "white"
   });
-
-
 
   group.add(parentContainer, circle);
   layer.add(group);
@@ -325,13 +539,304 @@ var anotherShape = function() {
 
     var mousePos = stage.getPointerPosition();
     tooltip.position({
-      x: mousePos.x,
-      y: mousePos.y
+      x: mousePos.x - 23,
+      y: mousePos.y + 20
     });
-    tooltip.text("Left: " + (stage.width() - (stage.width() - stage.getPointerPosition().x)) + "\n" +
-      "Right: " + (stage.width() - stage.getPointerPosition().x) + "\n" +
-      "Top: " + (stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
-      "Bottom: " + (stage.height() - stage.getPointerPosition().y)
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
+      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
+    );
+    tooltip.show();
+    tooltipLayer.batchDraw();
+  });
+}
+
+
+/*
+Adding a click function for when the user clicks on the drop down box and
+selects #eighteenbytwentyfour then the function eighteenbytwentyfour() will be triggered
+ */
+jQuery("#eighteenbytwentyfour").click(function() {
+  eighteenbytwentyfour();
+});
+
+
+
+/*
+Function eighteenbytwentyfour(): Encompasses a function that on click will create a frame
+(w/ var parentContainer & var circle) on the stage.
+
+Function cirlce.on(): Acts as the marker for the frame (parentContainer). On
+click it triggers the tooltip to be printed on the frame.
+
+Var parentContainer creates a new Konva.Rect that acts as the frame
+
+Var circle creates a new Konva.Circle that I attached to the the parentContainer
+to act as a nail and a marker.
+
+Var tooltip creates a text layer that I use to display the tooltip
+ */
+var eighteenbytwentyfour = function() {
+  var layer = new Konva.Layer();
+
+  var group = new Konva.Group({
+    draggable: true
+  });
+
+  var tooltipLayer = new Konva.Layer();
+
+  var parentContainer = new Konva.Rect({
+    x: 200,
+    y: 200,
+    width: 144,
+    height: 192,
+    fill: '#65666c',
+    stroke: '#3c1704',
+    strokeWidth: 13,
+    ShadowOffsetX: -7,
+    ShadowOffsetY: 4,
+    ShadowBlur: 10,
+    opacity: .9,
+    draggable: false
+  });
+
+  var circle = new Konva.Circle({
+    x: 200 + parentContainer.getWidth()/2,
+    y: 195,
+    radius: 5,
+    fill: 'black',
+    stroke: 'grey',
+    strokeWidth: '2',
+    draggable: false
+  });
+
+  //Creating tooltipOne
+  var tooltip = new Konva.Text({
+    text: "",
+    fontFamily: "Calibri",
+    fontStyle: "bold",
+    fontSize: 10,
+    padding: 5,
+    visible: false,
+    fill: "white",
+    opacity: 0.75,
+    textFill: "white"
+  });
+
+  group.add(parentContainer, circle);
+  layer.add(group);
+
+  tooltipLayer.add(tooltip);
+
+  stage.add(layer);
+  stage.add(tooltipLayer);
+
+  circle.on('click', function() {
+
+    var mousePos = stage.getPointerPosition();
+    tooltip.position({
+      x: mousePos.x - 23,
+      y: mousePos.y + 20
+    });
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
+      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
+    );
+    tooltip.show();
+    tooltipLayer.batchDraw();
+  });
+}
+
+
+/*
+Adding a click function for when the user clicks on the drop down box and
+selects #twentybytwentyfour then the function twentybytwentyfour() will be triggered
+ */
+jQuery("#twentybytwentyfour").click(function() {
+  twentybytwentyfour();
+});
+
+
+
+/*
+Function twentybytwentyfour(): Encompasses a function that on click will create a frame
+(w/ var parentContainer & var circle) on the stage.
+
+Function cirlce.on(): Acts as the marker for the frame (parentContainer). On
+click it triggers the tooltip to be printed on the frame.
+
+Var parentContainer creates a new Konva.Rect that acts as the frame
+
+Var circle creates a new Konva.Circle that I attached to the the parentContainer
+to act as a nail and a marker.
+
+Var tooltip creates a text layer that I use to display the tooltip
+ */
+var twentybytwentyfour = function() {
+  var layer = new Konva.Layer();
+
+  var group = new Konva.Group({
+    draggable: true
+  });
+
+  var tooltipLayer = new Konva.Layer();
+
+  var parentContainer = new Konva.Rect({
+    x: 200,
+    y: 200,
+    width: 160,
+    height: 192,
+    fill: '#65666c',
+    stroke: '#3c1704',
+    strokeWidth: 13,
+    ShadowOffsetX: -7,
+    ShadowOffsetY: 4,
+    ShadowBlur: 10,
+    opacity: .9,
+    draggable: false
+  });
+
+  var circle = new Konva.Circle({
+    x: 200 + parentContainer.getWidth()/2,
+    y: 195,
+    radius: 5,
+    fill: 'black',
+    stroke: 'grey',
+    strokeWidth: '2',
+    draggable: false
+  });
+
+  //Creating tooltipOne
+  var tooltip = new Konva.Text({
+    text: "",
+    fontFamily: "Calibri",
+    fontStyle: "bold",
+    fontSize: 10,
+    padding: 5,
+    visible: false,
+    fill: "white",
+    opacity: 0.75,
+    textFill: "white"
+  });
+
+  group.add(parentContainer, circle);
+  layer.add(group);
+
+  tooltipLayer.add(tooltip);
+
+  stage.add(layer);
+  stage.add(tooltipLayer);
+
+  circle.on('click', function() {
+
+    var mousePos = stage.getPointerPosition();
+    tooltip.position({
+      x: mousePos.x - 23,
+      y: mousePos.y + 20
+    });
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
+      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
+    );
+    tooltip.show();
+    tooltipLayer.batchDraw();
+  });
+}
+
+
+/*
+Adding a click function for when the user clicks on the drop down box and
+selects #twentyfourbythirtysix then the function twentyfourbythirtysix() will be triggered
+ */
+jQuery("#twentyfourbythirtysix").click(function() {
+  twentyfourbythirtysix();
+});
+
+
+
+/*
+Function twentyfourbythirtysix(): Encompasses a function that on click will create a frame
+(w/ var parentContainer & var circle) on the stage.
+
+Function cirlce.on(): Acts as the marker for the frame (parentContainer). On
+click it triggers the tooltip to be printed on the frame.
+
+Var parentContainer creates a new Konva.Rect that acts as the frame
+
+Var circle creates a new Konva.Circle that I attached to the the parentContainer
+to act as a nail and a marker.
+
+Var tooltip creates a text layer that I use to display the tooltip
+ */
+var twentyfourbythirtysix = function() {
+  var layer = new Konva.Layer();
+
+  var group = new Konva.Group({
+    draggable: true
+  });
+
+  var tooltipLayer = new Konva.Layer();
+
+  var parentContainer = new Konva.Rect({
+    x: 200,
+    y: 200,
+    width: 160,
+    height: 288,
+    fill: '#65666c',
+    stroke: '#3c1704',
+    strokeWidth: 13,
+    ShadowOffsetX: -7,
+    ShadowOffsetY: 4,
+    ShadowBlur: 10,
+    opacity: .9,
+    draggable: false
+  });
+
+  var circle = new Konva.Circle({
+    x: 200 + parentContainer.getWidth()/2,
+    y: 195,
+    radius: 5,
+    fill: 'black',
+    stroke: 'grey',
+    strokeWidth: '2',
+    draggable: false
+  });
+
+  //Creating tooltipOne
+  var tooltip = new Konva.Text({
+    text: "",
+    fontFamily: "Calibri",
+    fontStyle: "bold",
+    fontSize: 10,
+    padding: 5,
+    visible: false,
+    fill: "white",
+    opacity: 0.75,
+    textFill: "white"
+  });
+
+  group.add(parentContainer, circle);
+  layer.add(group);
+
+  tooltipLayer.add(tooltip);
+
+  stage.add(layer);
+  stage.add(tooltipLayer);
+
+  circle.on('click', function() {
+
+    var mousePos = stage.getPointerPosition();
+    tooltip.position({
+      x: mousePos.x - 23,
+      y: mousePos.y + 20
+    });
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
+      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
     );
     tooltip.show();
     tooltipLayer.batchDraw();
