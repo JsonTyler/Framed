@@ -6,8 +6,6 @@ Used for:
  */
 function loadData(form) {
 
-
-
  /*
 Background changer for stage & select drop down boxes.
   Available Backgrounds:
@@ -190,6 +188,12 @@ to act as a nail and a marker.
 Var tooltip creates a text layer that I use to display the tooltip
  */
 var fivebyseven = function() {
+
+  document.getElementById('hide').addEventListener('click', function() {
+      tooltip.hide();
+      tooltipLayer.draw();
+  }, false);
+
   var layer = new Konva.Layer();
 
   var group = new Konva.Group({
@@ -288,6 +292,12 @@ to act as a nail and a marker.
 Var tooltip creates a text layer that I use to display the tooltip
  */
 var eightbyten = function() {
+
+  document.getElementById('hide').addEventListener('click', function() {
+      tooltip.hide();
+      tooltipLayer.draw();
+  }, false);
+
   var layer = new Konva.Layer();
 
   var group = new Konva.Group({
@@ -386,6 +396,12 @@ to act as a nail and a marker.
 Var tooltip creates a text layer that I use to display the tooltip
  */
 var elevenbyfourteen = function() {
+
+  document.getElementById('hide').addEventListener('click', function() {
+      tooltip.hide();
+      tooltipLayer.draw();
+  }, false);
+
   var layer = new Konva.Layer();
 
   var group = new Konva.Group({
@@ -483,6 +499,12 @@ to act as a nail and a marker.
 Var tooltip creates a text layer that I use to display the tooltip
  */
 var sixteenbytwenty = function() {
+
+  document.getElementById('hide').addEventListener('click', function() {
+      tooltip.hide();
+      tooltipLayer.draw();
+  }, false);
+
   var layer = new Konva.Layer();
 
   var group = new Konva.Group({
@@ -580,6 +602,12 @@ to act as a nail and a marker.
 Var tooltip creates a text layer that I use to display the tooltip
  */
 var eighteenbytwentyfour = function() {
+
+  document.getElementById('hide').addEventListener('click', function() {
+      tooltip.hide();
+      tooltipLayer.draw();
+  }, false);
+
   var layer = new Konva.Layer();
 
   var group = new Konva.Group({
@@ -677,6 +705,12 @@ to act as a nail and a marker.
 Var tooltip creates a text layer that I use to display the tooltip
  */
 var twentybytwentyfour = function() {
+
+  document.getElementById('hide').addEventListener('click', function() {
+      tooltip.hide();
+      tooltipLayer.draw();
+  }, false);
+
   var layer = new Konva.Layer();
 
   var group = new Konva.Group({
@@ -774,6 +808,12 @@ to act as a nail and a marker.
 Var tooltip creates a text layer that I use to display the tooltip
  */
 var twentyfourbythirtysix = function() {
+
+  document.getElementById('hide').addEventListener('click', function() {
+      tooltip.hide();
+      tooltipLayer.draw();
+  }, false);
+
   var layer = new Konva.Layer();
 
   var group = new Konva.Group({
