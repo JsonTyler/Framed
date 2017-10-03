@@ -141,8 +141,8 @@ and to do that I have to call it from index.html into script.js
 
   container.style.width = width + 'px';
   container.style.height = height + 'px';
-  console.log(container.style.width);
-  console.log(container.style.height);
+  console.log("Width: " + container.style.width);
+  console.log("Height: " + container.style.height);
 
   var control = document.getElementById('controlPanel');
 
@@ -251,10 +251,10 @@ var fivebyseven = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
-      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
+      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
     );
     tooltip.show();
     tooltipLayer.batchDraw();
@@ -351,10 +351,10 @@ var eightbyten = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
-      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
+      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
     );
     tooltip.show();
     tooltipLayer.batchDraw();
@@ -447,10 +447,10 @@ var elevenbyfourteen = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
-      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
+      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
     );
     tooltip.show();
     tooltipLayer.batchDraw();
@@ -544,10 +544,10 @@ var sixteenbytwenty = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
-      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
+      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
     );
     tooltip.show();
     tooltipLayer.batchDraw();
@@ -641,10 +641,10 @@ var eighteenbytwentyfour = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
-      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
+      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
     );
     tooltip.show();
     tooltipLayer.batchDraw();
@@ -738,10 +738,10 @@ var twentybytwentyfour = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
-      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
+      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
     );
     tooltip.show();
     tooltipLayer.batchDraw();
@@ -835,10 +835,10 @@ var twentyfourbythirtysix = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))) + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)) + "\n" +
-      "Top: " + Math.round(stage.height() - (stage.height() - stage.getPointerPosition().y)) + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y))
+    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
+      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
+      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
+      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
     );
     tooltip.show();
     tooltipLayer.batchDraw();

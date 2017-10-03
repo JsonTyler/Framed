@@ -1,5 +1,4 @@
 Main:
-  ☐ Change measurements on frames from pixels to inches/ft
   ☐ Add hover over tooltip to show frame size (ex: 5x7)
   ☐ Add delete button (currently can only drag off the page)
   ☐ Add UI of the rest of the page
@@ -17,6 +16,9 @@ Remember:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+
+  ✔ Change measurements on frames from pixels to inches/ft @done(2017-10-03 10:49) @project(Main)
+
   ✔ Change wall width and wall height input boxes from pixels to inches/ft @done(2017-10-03 10:30) @project(Main)
 
   ✔ Add appropriate distance measurements styling for each frame size (white) @done(2017-10-02 03:00) @project(Main)
