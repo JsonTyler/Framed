@@ -134,13 +134,15 @@ drop down boxes. Below I add it to a layer so the background doesnt cover it
 and to do that I have to call it from index.html into script.js
  through --> document.getElementById('controlPanel').
  */
-  var width = form.wallWidth.value;
-  var height = form.wallHeight.value;
+  var width = form.wallWidth.value * 100;
+  var height = form.wallHeight.value * 100;
 
   var container = document.getElementById('container');
 
   container.style.width = width + 'px';
   container.style.height = height + 'px';
+  console.log(container.style.width);
+  console.log(container.style.height);
 
   var control = document.getElementById('controlPanel');
 

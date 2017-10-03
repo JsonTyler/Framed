@@ -1,6 +1,5 @@
 Main:
-  ☐ Change wall width and wall height input boxes from pixels to inches/ft
-  ☐ Change measurements from pixels to inches/ft
+  ☐ Change measurements on frames from pixels to inches/ft
   ☐ Add hover over tooltip to show frame size (ex: 5x7)
   ☐ Add delete button (currently can only drag off the page)
   ☐ Add UI of the rest of the page
@@ -18,12 +17,14 @@ Remember:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+  ✔ Change wall width and wall height input boxes from pixels to inches/ft @done(2017-10-03 10:30) @project(Main)
+
   ✔ Add appropriate distance measurements styling for each frame size (white) @done(2017-10-02 03:00) @project(Main)
   ✔ Fix placement of dots/nails (important due to that their location is directly related to the tooltip location) @done(2017-10-02 02:59) @project(Main)
   ✔ Add additional frame sizes (sizes listed on index.html) @done(2017-10-02 02:59) @project(Main)
   ✔ Convert pixels to inches in theory (Max width: 1500px & Max height: 850 px  ||  Max width: 15 feet & Max height: 8.5 feet  ||  100px = 1 ft  || 8px = 1in) @done(2017-10-02 02:00) @project(Main)
   ✔ Fixed infinite decimals with Math.round @done(2017-10-02 01:58) @project(Main)
-  
+
   ✔ Allow controlPanel to be draggable @done(2017-10-01 23:30) @project(Extras)
 
 
