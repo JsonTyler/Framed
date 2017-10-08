@@ -239,11 +239,22 @@ var fivebyseven = function() {
     opacity: 0.75,
     textFill: "white"
   });
+  var tooltip2 = new Konva.Text({
+    text: "",
+    fontFamily: "Calibri",
+    fontStyle: "bold",
+    fontSize: 10,
+    padding: 7,
+    visible: true,
+    fill: "white",
+    opacity: 0.75,
+    textFill: "white"
+  });
 
   group.add(parentContainer, circle);
   layer.add(group);
 
-  tooltipLayer.add(tooltip);
+  tooltipLayer.add(tooltip, tooltip2);
 
   stage.add(layer);
   stage.add(tooltipLayer);
@@ -263,6 +274,22 @@ var fivebyseven = function() {
     tooltip.show();
     tooltipLayer.batchDraw();
   });
+
+
+parentContainer.on("mousemove", function(){
+       var mousePos = stage.getPointerPosition();
+       tooltip2.position({
+           x : mousePos.x + 3,
+           y : mousePos.y + 3
+       });
+       tooltip2.text("5 in x 7 in");
+       tooltip2.show();
+       tooltipLayer.batchDraw();
+   });
+   parentContainer.on("mouseout", function(){
+       tooltip2.hide();
+       tooltipLayer.draw();
+   });
 }
 
 
@@ -343,13 +370,23 @@ var eightbyten = function() {
     opacity: 0.75,
     textFill: "white"
   });
-
+  var tooltip2 = new Konva.Text({
+    text: "",
+    fontFamily: "Calibri",
+    fontStyle: "bold",
+    fontSize: 10,
+    padding: 7,
+    visible: true,
+    fill: "white",
+    opacity: 0.75,
+    textFill: "white"
+  });
 
 
   group.add(parentContainer, circle);
   layer.add(group);
 
-  tooltipLayer.add(tooltip);
+  tooltipLayer.add(tooltip, tooltip2);
 
   stage.add(layer);
   stage.add(tooltipLayer);
@@ -369,6 +406,22 @@ var eightbyten = function() {
     tooltip.show();
     tooltipLayer.batchDraw();
   });
+
+
+parentContainer.on("mousemove", function(){
+       var mousePos = stage.getPointerPosition();
+       tooltip2.position({
+           x : mousePos.x + 3,
+           y : mousePos.y + 3
+       });
+       tooltip2.text("8 in x 10 in");
+       tooltip2.show();
+       tooltipLayer.batchDraw();
+   });
+   parentContainer.on("mouseout", function(){
+       tooltip2.hide();
+       tooltipLayer.draw();
+   });
 }
 
 /*
@@ -447,11 +500,22 @@ var elevenbyfourteen = function() {
     opacity: 0.75,
     textFill: "white"
   });
+  var tooltip2 = new Konva.Text({
+    text: "",
+    fontFamily: "Calibri",
+    fontStyle: "bold",
+    fontSize: 15,
+    padding: 7,
+    visible: true,
+    fill: "white",
+    opacity: 0.75,
+    textFill: "white"
+  });
 
   group.add(parentContainer, circle);
   layer.add(group);
 
-  tooltipLayer.add(tooltip);
+  tooltipLayer.add(tooltip, tooltip2);
 
   stage.add(layer);
   stage.add(tooltipLayer);
@@ -471,6 +535,22 @@ var elevenbyfourteen = function() {
     tooltip.show();
     tooltipLayer.batchDraw();
   });
+
+
+parentContainer.on("mousemove", function(){
+       var mousePos = stage.getPointerPosition();
+       tooltip2.position({
+           x : mousePos.x + 3,
+           y : mousePos.y + 3
+       });
+       tooltip2.text("11 in x 14 in");
+       tooltip2.show();
+       tooltipLayer.batchDraw();
+   });
+   parentContainer.on("mouseout", function(){
+       tooltip2.hide();
+       tooltipLayer.draw();
+   });
 }
 
 
@@ -550,11 +630,22 @@ var sixteenbytwenty = function() {
     opacity: 0.75,
     textFill: "white"
   });
+  var tooltip2 = new Konva.Text({
+    text: "",
+    fontFamily: "Calibri",
+    fontStyle: "bold",
+    fontSize: 15,
+    padding: 7,
+    visible: true,
+    fill: "white",
+    opacity: 0.75,
+    textFill: "white"
+  });
 
   group.add(parentContainer, circle);
   layer.add(group);
 
-  tooltipLayer.add(tooltip);
+  tooltipLayer.add(tooltip, tooltip2);
 
   stage.add(layer);
   stage.add(tooltipLayer);
@@ -574,6 +665,22 @@ var sixteenbytwenty = function() {
     tooltip.show();
     tooltipLayer.batchDraw();
   });
+
+
+parentContainer.on("mousemove", function(){
+       var mousePos = stage.getPointerPosition();
+       tooltip2.position({
+           x : mousePos.x + 3,
+           y : mousePos.y + 3
+       });
+       tooltip2.text("16 in x 20 in");
+       tooltip2.show();
+       tooltipLayer.batchDraw();
+   });
+   parentContainer.on("mouseout", function(){
+       tooltip2.hide();
+       tooltipLayer.draw();
+   });
 }
 
 
@@ -653,11 +760,22 @@ var eighteenbytwentyfour = function() {
     opacity: 0.75,
     textFill: "white"
   });
+  var tooltip2 = new Konva.Text({
+    text: "",
+    fontFamily: "Calibri",
+    fontStyle: "bold",
+    fontSize: 15,
+    padding: 7,
+    visible: true,
+    fill: "white",
+    opacity: 0.75,
+    textFill: "white"
+  });
 
   group.add(parentContainer, circle);
   layer.add(group);
 
-  tooltipLayer.add(tooltip);
+  tooltipLayer.add(tooltip, tooltip2);
 
   stage.add(layer);
   stage.add(tooltipLayer);
@@ -677,6 +795,23 @@ var eighteenbytwentyfour = function() {
     tooltip.show();
     tooltipLayer.batchDraw();
   });
+
+
+  parentContainer.on("mousemove", function(){
+       var mousePos = stage.getPointerPosition();
+       tooltip2.position({
+           x : mousePos.x + 3,
+           y : mousePos.y + 3
+       });
+       tooltip2.text("18 in x 24 in");
+       tooltip2.show();
+       tooltipLayer.batchDraw();
+   });
+   parentContainer.on("mouseout", function(){
+       tooltip2.hide();
+       tooltipLayer.draw();
+   });
+
 }
 
 
@@ -756,11 +891,22 @@ var twentybytwentyfour = function() {
     opacity: 0.75,
     textFill: "white"
   });
+  var tooltip2 = new Konva.Text({
+    text: "",
+    fontFamily: "Calibri",
+    fontStyle: "bold",
+    fontSize: 15,
+    padding: 7,
+    visible: true,
+    fill: "white",
+    opacity: 0.75,
+    textFill: "white"
+  });
 
   group.add(parentContainer, circle);
   layer.add(group);
 
-  tooltipLayer.add(tooltip);
+  tooltipLayer.add(tooltip, tooltip2);
 
   stage.add(layer);
   stage.add(tooltipLayer);
@@ -780,6 +926,22 @@ var twentybytwentyfour = function() {
     tooltip.show();
     tooltipLayer.batchDraw();
   });
+
+
+parentContainer.on("mousemove", function(){
+       var mousePos = stage.getPointerPosition();
+       tooltip2.position({
+           x : mousePos.x + 3,
+           y : mousePos.y + 3
+       });
+       tooltip2.text("20 in x 24 in");
+       tooltip2.show();
+       tooltipLayer.batchDraw();
+   });
+   parentContainer.on("mouseout", function(){
+       tooltip2.hide();
+       tooltipLayer.draw();
+   });
 }
 
 
@@ -859,11 +1021,22 @@ var twentyfourbythirtysix = function() {
     opacity: 0.75,
     textFill: "white"
   });
+  var tooltip2 = new Konva.Text({
+    text: "",
+    fontFamily: "Calibri",
+    fontStyle: "bold",
+    fontSize: 15,
+    padding: 7,
+    visible: true,
+    fill: "white",
+    opacity: 0.75,
+    textFill: "white"
+  });
 
   group.add(parentContainer, circle);
   layer.add(group);
 
-  tooltipLayer.add(tooltip);
+  tooltipLayer.add(tooltip, tooltip2);
 
   stage.add(layer);
   stage.add(tooltipLayer);
@@ -883,5 +1056,20 @@ var twentyfourbythirtysix = function() {
     tooltip.show();
     tooltipLayer.batchDraw();
   });
+
+  parentContainer.on("mousemove", function(){
+       var mousePos = stage.getPointerPosition();
+       tooltip2.position({
+           x : mousePos.x + 3,
+           y : mousePos.y + 3
+       });
+       tooltip2.text("24 in x 36 in");
+       tooltip2.show();
+       tooltipLayer.batchDraw();
+   });
+   parentContainer.on("mouseout", function(){
+       tooltip2.hide();
+       tooltipLayer.draw();
+   });
 }
 }
