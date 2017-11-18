@@ -1,7 +1,6 @@
 Main:
-  ☐ Add UI of the rest of the page
 
-Extras:
+Extras for Future:
   ☐ Allow other items
     ☐ Posters
     ☐ Shelves
@@ -14,6 +13,10 @@ Remember:
 
 ＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿＿
 Archive:
+  ✔ Add UI of the rest of the page @done(2017-11-18 17:36) @project(Main)
+  ✔ Reorder controlPanel for easier use @done(2017-11-18 17:36) @project(Main)
+  ✔ Add banner @done(2017-11-18 17:36) @project(Main)
+  
   ✔ Add hover over tooltip to show frame size (ex: 5x7) @done(2017-10-07 21:24) @project(Main)
   ✔ Add delete button (currently can only drag off the page), works with hide function now for leftover tooltips @done(2017-10-07 21:24) @project(Main)
 

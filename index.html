@@ -9,27 +9,44 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.0/jquery-ui.min.js" type="text/javascript"></script>
   <script src="https://cdn.rawgit.com/konvajs/konva/1.6.5/konva.min.js"></script>
 
+
+
 </head>
 
 <body>
+  <div id="shows">+</div>
+  <div id="hides">-</div>
+
+  <div style="clear:both;"></div>
+
+  <ul id="nav">
+    <li><a href="index.html">Framed by Jason Bruno</a></li>
+    <li style="color: white; float: right; padding-right: 15px; font-weight: bold;">CSC 475 Software Engineering</li>
+  </ul>
+
+
 
   <!--The div for Konva.js, where the stage allocated into-->
-    <div id="container"></div>
+  <div id="container"></div>
 
 
-    <script>
-    // add button event bindings
+  <script>
+    $(function() {
+      $("#controlPanel").draggable();
+    });
 
+    $('#shows').click(function() {
+      $('#nav').slideDown('slow');
+      $('#controlPanel').show('slow');
+      return false;
+    });
 
-
-    </script>
-
-    <script>
-    $( function() {
-      $( "#controlPanel" ).draggable();
-    } );
-
-    </script>
+    $('#hides').click(function() {
+      $('#nav').slideUp('fast');
+      $('#controlPanel').hide();
+      return false;
+    });
+  </script>
 
 
 
@@ -39,11 +56,23 @@
       - Adding a frame
       - Choosing w x h of wall
   -->
-<br />
-<div id="controlPanel">
-  <div id="styler1">
-    Choose Background:
-    <select runat="server" class="select" id="one">
+  <br />
+  <div id="controlPanel">
+
+    <div id="styler3">
+      <form id="myForm" name="myForm" onsubmit="event.preventDefault(); return loadData(this)">
+        #1 → Wall Width:
+        <input type="text" name="wallWidth" id="wallWidth" />
+        <br /> <br /> #2 → Wall Height:
+        <input type="text" name="wallHeight" id="wallHeight" />
+        <br /><br /> #3 → <input type="submit" id="submitbtn" data-inline="true" value="Submit">
+        <br /> <br />
+      </form>
+    </div>
+
+    <div id="styler1">
+      #4 → Choose Background:
+      <select runat="server" class="select" id="one">
       <option></option>
       <option class="red" value="A">Blue Wall</option>
       <option class="red" value="B">Regular Brick</option>
@@ -52,11 +81,11 @@
       <option class="red" value="E">Wood</option>
       <option class="red" value="F">White Swirl</option>
     </select>
-  </div>
-<br />
-  <div id="styler2">
-    Add Frame:
-    <select class="select" id="two">
+    </div>
+    <br />
+    <div id="styler2">
+      #5 → Add Frame:
+      <select class="select" id="two">
       <option></option>
       <option id="fivebyseven" value="fivebyseven">5" x 7"</option>
       <option id="eightbyten" value="eightbyten">8" x 10"</option>
@@ -66,25 +95,15 @@
       <option id="twentybytwentyfour" value="twentybytwentyfour">20" x 24"</option>
       <option id="twentyfourbythirtysix" value="twentyfourbythirtysix">24" x 36"</option>-->
     </select>
-    <button id="hide">
+      <button id="hide">
           hide
     </button>
+    </div>
+
+    <br />
+
+
   </div>
-
-<br />
-
-  <div id="styler3">
-    <form id="myForm" name="myForm" onsubmit="event.preventDefault(); return loadData(this)">
-      Wall Width:
-      <input type="text" name="wallWidth" id="wallWidth" /> <br /> <br />
-      Wall Height:
-      <input type="text" name="wallHeight" id="wallHeight" />
-      <br /><br />
-      <input type="submit" id="submitbtn" data-inline="true" value="Submit">
-
-    </form>
-  </div>
-</div>
 
 
 

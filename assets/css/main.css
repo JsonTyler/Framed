@@ -1,6 +1,6 @@
 html{
 height: 100%;
-background: #2d2c32;
+background: black;
 }
 
 body {
@@ -12,15 +12,16 @@ body {
 
 #controlPanel {
   width: 318px;
-  height: 150px;
+  height: 175px;
   padding: 40px;
-  position: relative;
-  background: #7dcb97;
-  color: white;
+  position: absolute;
+  opacity: 0.8;
+  background:#05386B ;
+  color: #EDF5E1;
   font-weight: bold;
-  left: 40px;
+  left: 48px;
   top: 50px;
-  border: solid black 3px;
+  border: solid #379683 medium;
 }
 
 #container {
@@ -32,6 +33,8 @@ body {
       transform: translateX(-50%) translateY(-50%);
   width: 100%;
   height: 100%;
+  border: solid #379683 thick;
+  opacity: 0.8l
 }
 
 #eightbyten {
@@ -61,7 +64,7 @@ body {
 
 .select option {
 background-color: #000;
-color: white;
+color: #EDF5E1;
 
 }
 
@@ -74,7 +77,52 @@ color: white;
 
  .select{
  background-color: #000;
- color: white;
+ color: #EDF5E1;
  width: 50px;
  height: 20px;
 }
+
+/*Banner Styling for nav */
+#navbarwidth {
+    width:100%;
+    position:absolute;
+    text-align: center;
+}
+#nav {
+    z-index: 999;
+    background:#05386B;
+    opacity: 0.75;
+    position:absolute;
+    left:0%;
+    top:0%;
+    margin: 0px;
+    padding: 0;
+    border-bottom: 2px solid #379683;
+
+    width:100%;
+    height: 23px;
+}
+#nav li a, #nav li {
+    font-size: 14px;
+    text-align: center;
+    display: inline-block;
+    min-width: 70px;
+}
+#nav li {
+    list-style: none;
+}
+#nav li a {
+    padding: 0.2em 2em;
+    text-decoration: none;
+    color: #EDF5E1;
+    font-weight: bold;
+}
+#nav li a:hover {
+    color: #05386B;
+}
+ul{
+  padding-left: 80px;
+}
+
+#hides {color: #EDF5E1; z-index: 9999; position: absolute; width:20px; height:20px; border-radius:15px; background:#05386B; margin:5px; text-align:center; line-height:20px; cursor:pointer; margin-top: 22px; border: solid #379683 medium; opacity: 0.8 }
+#shows {color: #EDF5E1; z-index: 10000; position: absolute; width:20px; height:20px; border-radius:15px; background:#05386B; margin:5px; text-align:center; line-height:20px; cursor:pointer; margin-top: 51px; border: solid #379683 medium; opacity: 0.8}
