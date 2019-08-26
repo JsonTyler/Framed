@@ -11,8 +11,6 @@ body {
 
 
 #controlPanel {
-  width: 318px;
-  height: 175px;
   padding: 40px;
   position: absolute;
   opacity: 0.8;
