@@ -162,17 +162,6 @@ the container is referencing the html div id #container in index.html.
 });
 
 
-
-/*
-Adding a click function for when the user clicks on the drop down box and
-selects #fivebyseven then the function fivebyseven() will be triggered
- */
-jQuery("#fivebyseven").click(function() {
-  fivebyseven();
-});
-
-
-
 /*
 Function fivebyseven(): Encompasses a function that on click will create a frame
 (w/ var parentContainer & var circle) on the stage.
@@ -291,18 +280,6 @@ parentContainer.on("mousemove", function(){
        tooltipLayer.draw();
    });
 }
-
-
-
-/*
-Adding a click function for when the user clicks on the drop down box and
-selects #eightbyten then the function eightbyten() will be triggered
- */
-jQuery("#eightbyten").click(function() {
-  eightbyten();
-});
-
-
 
 /*
 Function eightbyten(): Encompasses a function that on click will create a frame
@@ -425,16 +402,6 @@ parentContainer.on("mousemove", function(){
 }
 
 /*
-Adding a click function for when the user clicks on the drop down box and
-selects #elevenbyfourteen then the function elevenbyfourteen() will be triggered
- */
-jQuery("#elevenbyfourteen").click(function() {
-  elevenbyfourteen();
-});
-
-
-
-/*
 Function elevenbyfourteen(): Encompasses a function that on click will create a frame
 (w/ var parentContainer & var circle) on the stage.
 
@@ -552,17 +519,6 @@ parentContainer.on("mousemove", function(){
        tooltipLayer.draw();
    });
 }
-
-
-/*
-Adding a click function for when the user clicks on the drop down box and
-selects #sixteenbytwenty then the function sixteenbytwenty() will be triggered
- */
-jQuery("#sixteenbytwenty").click(function() {
-  sixteenbytwenty();
-});
-
-
 
 /*
 Function sixteenbytwenty(): Encompasses a function that on click will create a frame
@@ -682,17 +638,6 @@ parentContainer.on("mousemove", function(){
        tooltipLayer.draw();
    });
 }
-
-
-/*
-Adding a click function for when the user clicks on the drop down box and
-selects #eighteenbytwentyfour then the function eighteenbytwentyfour() will be triggered
- */
-jQuery("#eighteenbytwentyfour").click(function() {
-  eighteenbytwentyfour();
-});
-
-
 
 /*
 Function eighteenbytwentyfour(): Encompasses a function that on click will create a frame
@@ -814,17 +759,6 @@ var eighteenbytwentyfour = function() {
 
 }
 
-
-/*
-Adding a click function for when the user clicks on the drop down box and
-selects #twentybytwentyfour then the function twentybytwentyfour() will be triggered
- */
-jQuery("#twentybytwentyfour").click(function() {
-  twentybytwentyfour();
-});
-
-
-
 /*
 Function twentybytwentyfour(): Encompasses a function that on click will create a frame
 (w/ var parentContainer & var circle) on the stage.
@@ -943,17 +877,6 @@ parentContainer.on("mousemove", function(){
        tooltipLayer.draw();
    });
 }
-
-
-/*
-Adding a click function for when the user clicks on the drop down box and
-selects #twentyfourbythirtysix then the function twentyfourbythirtysix() will be triggered
- */
-jQuery("#twentyfourbythirtysix").click(function() {
-  twentyfourbythirtysix();
-});
-
-
 
 /*
 Function twentyfourbythirtysix(): Encompasses a function that on click will create a frame
