@@ -6,6 +6,7 @@ Used for:
  */
 function loadData(form) {
 
+  const oneInchUnit = 11;
  /*
 Background changer for stage & select drop down boxes.
   Available Backgrounds:
@@ -22,42 +23,42 @@ Background changer for stage & select drop down boxes.
       $("select, #container").css('background-size', 'cover');
       $("select, #container").css('color', 'transparent');
       $("select, #container").css('font-style', 'bold');
-
+      ruler();
     }
     if($(this).val() == 'B'){
       $("select, #container").css('background-image', 'url(assets/css/img/brick.jpg)');
       $("select, #container").css('background-size', 'cover');
       $("select, #container").css('color', 'transparent');
       $("select, #container").css('font-style', 'bold');
-
+      ruler();
     }
     if($(this).val() == 'C'){
       $("select, #container").css('background-image', 'url(assets/css/img/whiteBrick.jpg)');
       $("select, #container").css('background-size', 'cover');
       $("select, #container").css('color', 'transparent');
       $("select, #container").css('font-style', 'bold');
-
+      ruler();
     }
     if($(this).val() == 'D'){
       $("select, #container").css('background-image', 'url(assets/css/img/whiteWall.jpg)');
       $("select, #container").css('background-size', 'cover');
       $("select, #container").css('color', 'transparent');
       $("select, #container").css('font-style', 'bold');
-
+      ruler();
     }
     if($(this).val() == 'E'){
       $("select, #container").css('background-image', 'url(assets/css/img/wood.jpg)');
       $("select, #container").css('background-size', 'cover');
       $("select, #container").css('color', 'transparent');
       $("select, #container").css('font-style', 'bold');
-
+      ruler();
     }
     if($(this).val() == 'F'){
       $("select, #container").css('background-image', 'url(assets/css/img/whiteSwirl.jpg)');
       $("select, #container").css('background-size', 'cover');
       $("select, #container").css('color', 'transparent');
       $("select, #container").css('font-style', 'bold');
-
+      ruler();
     }
   });
 
@@ -132,9 +133,8 @@ drop down boxes. Below I add it to a layer so the background doesnt cover it
 and to do that I have to call it from index.html into script.js
  through --> document.getElementById('controlPanel').
  */
-  var width = form.wallWidth.value * 100;
-  var height = form.wallHeight.value * 100;
-
+  var width = form.wallWidth.value * 12;
+  var height = form.wallHeight.value * 12;
   var container = document.getElementById('container');
 
   container.style.width = width + 'px';
@@ -160,6 +160,50 @@ the container is referencing the html div id #container in index.html.
     width: width,
     height: height,
 });
+
+
+/*
+1. Create a line on the stage
+2. Create a line every ___ pixels
+3. Add numbered tooltips on lines for size pointers
+*/
+var ruler = function() {
+  
+  var rulerLayer = new Konva.Layer();
+
+  var rulerXGroup = new Konva.Group({
+    draggable: false
+  });
+
+  var rulerTooltipLayer = new Konva.Layer();
+
+  console.log("Ruler: " + width)
+
+  for(var x=0; x<width; x+=143){
+    
+      var myLines = new Konva.Line({
+        // points: [0, 0, 10, 0], <-- starting point
+        points: [x, 0, x+5, 0],
+        stroke: 'black',
+        strokeWidth: 15,
+      });
+    
+    // ex: x1 y1 x2 y2
+    //     0  0  12 0
+    //     12 12 24 12
+    //     24 24 36 24
+      rulerXGroup.add(myLines);
+      console.log("x: "+ x);
+    
+  }
+
+  
+  rulerLayer.add(rulerXGroup);
+  stage.add(rulerLayer);
+}
+
+
+
 
 
 /*
@@ -194,8 +238,8 @@ var fivebyseven = function() {
   var parentContainer = new Konva.Rect({
     x: 200,
     y: 200,
-    width: 40,
-    height: 56,
+    width: 5 * oneInchUnit,
+    height: 7 * oneInchUnit,
     fill: '#65666c',
     stroke: '#3c1704',
     strokeWidth: 13,
@@ -313,8 +357,8 @@ var eightbyten = function() {
   var parentContainer = new Konva.Rect({
     x: 200,
     y: 200,
-    width: 64,
-    height: 80,
+    width: 8 * oneInchUnit,
+    height: 10 * oneInchUnit,
     fill: '#65666c',
     stroke: '#3c1704',
     strokeWidth: 13,
@@ -433,8 +477,8 @@ var elevenbyfourteen = function() {
   var parentContainer = new Konva.Rect({
     x: 200,
     y: 200,
-    width: 88,
-    height: 112,
+    width: 11 * oneInchUnit,
+    height: 14 * oneInchUnit,
     fill: '#65666c',
     stroke: '#3c1704',
     strokeWidth: 13,
@@ -552,8 +596,8 @@ var sixteenbytwenty = function() {
   var parentContainer = new Konva.Rect({
     x: 200,
     y: 200,
-    width: 128,
-    height: 160,
+    width: 16 * oneInchUnit,
+    height: 20 * oneInchUnit,
     fill: '#65666c',
     stroke: '#3c1704',
     strokeWidth: 13,
@@ -671,8 +715,8 @@ var eighteenbytwentyfour = function() {
   var parentContainer = new Konva.Rect({
     x: 200,
     y: 200,
-    width: 144,
-    height: 192,
+    width: 18 * oneInchUnit,
+    height: 24 * oneInchUnit,
     fill: '#65666c',
     stroke: '#3c1704',
     strokeWidth: 13,
@@ -791,8 +835,8 @@ var twentybytwentyfour = function() {
   var parentContainer = new Konva.Rect({
     x: 200,
     y: 200,
-    width: 160,
-    height: 192,
+    width: 20 * oneInchUnit,
+    height: 24 * oneInchUnit,
     fill: '#65666c',
     stroke: '#3c1704',
     strokeWidth: 13,
@@ -910,8 +954,8 @@ var twentyfourbythirtysix = function() {
   var parentContainer = new Konva.Rect({
     x: 200,
     y: 200,
-    width: 160,
-    height: 288,
+    width: 24 * oneInchUnit,
+    height: 36 * oneInchUnit,
     fill: '#65666c',
     stroke: '#3c1704',
     strokeWidth: 13,
