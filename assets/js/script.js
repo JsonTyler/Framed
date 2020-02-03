@@ -175,13 +175,17 @@ var ruler = function() {
     draggable: false
   });
 
+  var rulerYGroup = new Konva.Group({
+    draggable: false
+  });
+
   var rulerTooltipLayer = new Konva.Layer();
 
   console.log("Ruler: " + width)
 
   for(var x=0; x<width; x+=143){
     
-      var myLines = new Konva.Line({
+      var myXLines = new Konva.Line({
         // points: [0, 0, 10, 0], <-- starting point
         points: [x, 0, x+5, 0],
         stroke: 'black',
@@ -192,13 +196,27 @@ var ruler = function() {
     //     0  0  12 0
     //     12 12 24 12
     //     24 24 36 24
-      rulerXGroup.add(myLines);
+      rulerXGroup.add(myXLines);
       console.log("x: "+ x);
     
   }
 
+  for(var y=0; y<width; y+=143){
+    
+    var myYLines = new Konva.Line({
+      points: [0, y, 0, y+5],
+      stroke: 'black',
+      strokeWidth: 15,
+    });
+
+    rulerYGroup.add(myYLines);
+    console.log("y: "+ y);
+  
+}
+
   
   rulerLayer.add(rulerXGroup);
+  rulerLayer.add(rulerYGroup);
   stage.add(rulerLayer);
 }
 
