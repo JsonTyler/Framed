@@ -60,11 +60,17 @@
 
     <div id="styler3">
       <form id="myForm" name="myForm" onsubmit="event.preventDefault(); return loadData(this);">
-        Input Wall Width:
-        <input type="text" name="wallWidth" id="wallWidth" /> in
+        Choose Wall Width:
+        <input type="range" name="wallWidth" id="wallWidth" default="0" min="0" max="90"
+            oninput="document.getElementById('rangeValLabelWidth').innerHTML = this.value;"
+            step="1" value="200" /> 
+        <em id="rangeValLabelWidth" style="font-style: normal;"></em>"
         <input style="float: right;" type="submit" id="submitbtn" data-inline="true" value="Create">
-        <br /> <br /> Input Wall Height:
-        <input type="text" name="wallHeight" id="wallHeight" /> in
+        <br /> <br /> Choose Wall Height:
+        <input type="range" name="wallHeight" id="wallHeight" default="0" min="0" max="90"
+            oninput="document.getElementById('rangeValLabelHeight').innerHTML = this.value;"
+            step="1" value="200" /> 
+        <em id="rangeValLabelHeight" style="font-style: normal;"></em>"
         <br /> <br />
         <hr style="color:white"><br>
         Choose Background:

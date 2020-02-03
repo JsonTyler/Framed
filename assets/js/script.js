@@ -153,13 +153,13 @@ the container is referencing the html div id #container in index.html.
 2. The 'width: width' is referencing up above.
 
 3. The 'height: height' is referencing up above
- */
-  var stage = new Konva.Stage({
+*/
 
+  var stage = new Konva.Stage({
     container: "container",
     width: width,
     height: height,
-});
+  });
 
 
 /*
@@ -188,7 +188,7 @@ var ruler = function() {
       var myXLines = new Konva.Line({
         // points: [0, 0, 10, 0], <-- starting point
         points: [x, 0, x+5, 0],
-        stroke: 'black',
+        stroke: 'red',
         strokeWidth: 15,
       });
     
@@ -205,7 +205,7 @@ var ruler = function() {
     
     var myYLines = new Konva.Line({
       points: [0, y, 0, y+5],
-      stroke: 'black',
+      stroke: 'red',
       strokeWidth: 15,
     });
 
@@ -283,7 +283,7 @@ var fivebyseven = function() {
     text: "",
     fontFamily: "Calibri",
     fontStyle: "bold",
-    fontSize: 9,
+    fontSize: 13,
     padding: 5,
     visible: false,
     fill: "white",
@@ -317,10 +317,10 @@ var fivebyseven = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
-      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
+    tooltip.text("←: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/12) + '"' + "\n" +
+      "→: " + Math.round((stage.width() - stage.getPointerPosition().x)/12) + '"' + "\n" +
+      "↑: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/12) + '"' + "\n" +
+      "↓: " + Math.round((stage.height() - stage.getPointerPosition().y)/12) + '"' 
     );
     tooltip.show();
     tooltipLayer.batchDraw();
@@ -402,7 +402,7 @@ var eightbyten = function() {
     text: "",
     fontFamily: "Calibri",
     fontStyle: "bold",
-    fontSize: 10,
+    fontSize: 17,
     padding: 5,
     visible: false,
     fill: "white",
@@ -437,10 +437,10 @@ var eightbyten = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
-      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
+    tooltip.text("←: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/12) + '"' + "\n" +
+      "→: " + Math.round((stage.width() - stage.getPointerPosition().x)/12) + '"' + "\n" +
+      "↑: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/12) + '"' + "\n" +
+      "↓: " + Math.round((stage.height() - stage.getPointerPosition().y)/12) + '"' 
     );
     tooltip.show();
     tooltipLayer.batchDraw();
@@ -522,7 +522,7 @@ var elevenbyfourteen = function() {
     text: "",
     fontFamily: "Calibri",
     fontStyle: "bold",
-    fontSize: 10,
+    fontSize: 22,
     padding: 5,
     visible: false,
     fill: "white",
@@ -556,10 +556,10 @@ var elevenbyfourteen = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
-      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
+    tooltip.text("←: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/12) + '"' + "\n" +
+      "→: " + Math.round((stage.width() - stage.getPointerPosition().x)/12) + '"' + "\n" +
+      "↑: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/12) + '"' + "\n" +
+      "↓: " + Math.round((stage.height() - stage.getPointerPosition().y)/12) + '"' 
     );
     tooltip.show();
     tooltipLayer.batchDraw();
@@ -641,7 +641,7 @@ var sixteenbytwenty = function() {
     text: "",
     fontFamily: "Calibri",
     fontStyle: "bold",
-    fontSize: 10,
+    fontSize: 28,
     padding: 5,
     visible: false,
     fill: "white",
@@ -652,7 +652,7 @@ var sixteenbytwenty = function() {
     text: "",
     fontFamily: "Calibri",
     fontStyle: "bold",
-    fontSize: 15,
+    fontSize: 28,
     padding: 7,
     visible: true,
     fill: "white",
@@ -675,10 +675,10 @@ var sixteenbytwenty = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
-      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
+    tooltip.text("←: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/12) + '"' + "\n" +
+      "→: " + Math.round((stage.width() - stage.getPointerPosition().x)/12) + '"' + "\n" +
+      "↑: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/12) + '"' + "\n" +
+      "↓: " + Math.round((stage.height() - stage.getPointerPosition().y)/12) + '"' 
     );
     tooltip.show();
     tooltipLayer.batchDraw();
@@ -760,7 +760,7 @@ var eighteenbytwentyfour = function() {
     text: "",
     fontFamily: "Calibri",
     fontStyle: "bold",
-    fontSize: 10,
+    fontSize: 31,
     padding: 5,
     visible: false,
     fill: "white",
@@ -771,7 +771,7 @@ var eighteenbytwentyfour = function() {
     text: "",
     fontFamily: "Calibri",
     fontStyle: "bold",
-    fontSize: 15,
+    fontSize: 31,
     padding: 7,
     visible: true,
     fill: "white",
@@ -794,10 +794,10 @@ var eighteenbytwentyfour = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
-      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
+    tooltip.text("←: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/12) + '"' + "\n" +
+      "→: " + Math.round((stage.width() - stage.getPointerPosition().x)/12) + '"' + "\n" +
+      "↑: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/12) + '"' + "\n" +
+      "↓: " + Math.round((stage.height() - stage.getPointerPosition().y)/12) + '"' 
     );
     tooltip.show();
     tooltipLayer.batchDraw();
@@ -880,7 +880,7 @@ var twentybytwentyfour = function() {
     text: "",
     fontFamily: "Calibri",
     fontStyle: "bold",
-    fontSize: 10,
+    fontSize: 33,
     padding: 5,
     visible: false,
     fill: "white",
@@ -891,7 +891,7 @@ var twentybytwentyfour = function() {
     text: "",
     fontFamily: "Calibri",
     fontStyle: "bold",
-    fontSize: 15,
+    fontSize: 33,
     padding: 7,
     visible: true,
     fill: "white",
@@ -914,10 +914,10 @@ var twentybytwentyfour = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
-      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
+    tooltip.text("←: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/12) + '"' + "\n" +
+      "→: " + Math.round((stage.width() - stage.getPointerPosition().x)/12) + '"' + "\n" +
+      "↑: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/12) + '"' + "\n" +
+      "↓: " + Math.round((stage.height() - stage.getPointerPosition().y)/12) + '"' 
     );
     tooltip.show();
     tooltipLayer.batchDraw();
@@ -999,7 +999,7 @@ var twentyfourbythirtysix = function() {
     text: "",
     fontFamily: "Calibri",
     fontStyle: "bold",
-    fontSize: 10,
+    fontSize: 35,
     padding: 5,
     visible: false,
     fill: "white",
@@ -1010,7 +1010,7 @@ var twentyfourbythirtysix = function() {
     text: "",
     fontFamily: "Calibri",
     fontStyle: "bold",
-    fontSize: 15,
+    fontSize: 35,
     padding: 7,
     visible: true,
     fill: "white",
@@ -1033,10 +1033,10 @@ var twentyfourbythirtysix = function() {
       x: mousePos.x - 23,
       y: mousePos.y + 20
     });
-    tooltip.text("Left: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/8) + "in" + "\n" +
-      "Right: " + Math.round((stage.width() - stage.getPointerPosition().x)/8) + "in" + "\n" +
-      "Top: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/8) + "in" + "\n" +
-      "Floor: " + Math.round((stage.height() - stage.getPointerPosition().y)/8) + "in"
+    tooltip.text("←: " + Math.round((stage.width() - (stage.width() - stage.getPointerPosition().x))/12) + '"' + "\n" +
+      "→: " + Math.round((stage.width() - stage.getPointerPosition().x)/12) + '"' + "\n" +
+      "↑: " + Math.round((stage.height() - (stage.height() - stage.getPointerPosition().y))/12) + '"' + "\n" +
+      "↓: " + Math.round((stage.height() - stage.getPointerPosition().y)/12) + '"' 
     );
     tooltip.show();
     tooltipLayer.batchDraw();
